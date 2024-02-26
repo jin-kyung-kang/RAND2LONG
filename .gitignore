@@ -25,6 +25,24 @@
 # sas item store
 *.sas7bitm
 
+*.dat
+*.dbf
+
+*.accdb
+
 *.htm
 *.html
 *.lst
+*.inc
+*.xlsx
+*.bak
+
+# Preserve _maps.xlsx
+
+# !*_maps.xlsx
+
+!_project_auto.inc
+
+
+
+
