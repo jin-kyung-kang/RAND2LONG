@@ -2,7 +2,7 @@
 
 %global repo_name repo_path prj_name prj_path;
 %let repo_name = RAND2LONG;
-%let repo_path = C:\Users\jinha\OneDrive - Michigan Medicine\Desktop\Github\&repo_name;  
+%let repo_path = ..;  /* One level up in a tree directory */
 
 
 filename _desc "&repo_path";
