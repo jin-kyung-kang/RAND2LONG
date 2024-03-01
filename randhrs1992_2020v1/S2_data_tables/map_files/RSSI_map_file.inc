@@ -1,8 +1,8 @@
 /* This is map_file `RSSI_map_file.inc` for `RSSI_table` dataset */
-/* Repo name := RAND2LONG (version 0.70) */
+/* Repo name := RAND2LONG-ver1 (version 0.70) */
 /* Project name := randhrs1992_2020v1 */
 /* Excel map: test3_maps21FEB2024.xlsx */
-/* Date stamp: 23FEB24  */
+/* Date stamp: 29FEB24  */
 
 
 %macro label_statements;

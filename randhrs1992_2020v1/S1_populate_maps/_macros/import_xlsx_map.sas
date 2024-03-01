@@ -51,7 +51,7 @@ quit;
 %end;
 
 
-%if (%upcase(&table) = RLONG or %upcase(&table) = HLONG or %upcase(&table) = SLONG)  %then %do;
+%if (%upcase(&table) = RLONG or %upcase(&table) = HLONG or %upcase(&table) = SLONG) %then %do;
 %put --- IF RLONG or HLONG or SLONG: STEP 3A;
 proc sql noprint;
 alter table _temp_

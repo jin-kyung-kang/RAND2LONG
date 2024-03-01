@@ -1,7 +1,7 @@
 %put ===> autoexec.sas (PROJECT) STARTS;
 
 %global repo_name repo_path prj_name prj_path;
-%let repo_name = RAND2LONG;
+%let repo_name = RAND2LONG-ver1;
 %let repo_path = C:\Users\jinha\OneDrive - Michigan Medicine\Desktop\Github\&repo_name;  
 
 

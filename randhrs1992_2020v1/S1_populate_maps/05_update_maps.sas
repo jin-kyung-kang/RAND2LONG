@@ -82,7 +82,6 @@ data _libmap.SLong_map;
  set SLong_map;
  drop countx wave_summary0 wave_pattern0;
 run;
-
 ods html close;
 
 

@@ -13,14 +13,14 @@
 /*------ Excel file multiple maps ------*/
 %let xlsx_nickname = test3_maps;   /* */
 %let xlsx_date =21FEB2024;
-%let xlsx_path = C:\Users\jinha\OneDrive - Michigan Medicine\Desktop\Github\RAND2LONG;
+%let xlsx_path = \\maize.umhsnas.med.umich.edu\Geriatrics-HRS\External Drive\AHead_hrs_c\randhrs1992_2020v1_SAS;
 %let xlsx_name =&xlsx_nickname&xlsx_date;   
 %let table_version = &repo_version-&xlsx_date;
 
 
 /*--------- RAND and cntlin datasets in `LIBIN` libref    -----------*/
 
-libname LIBIN "\\maize.umhsnas.med.umich.edu\Geriatrics-HRS\External Drive\AHead_hrs_c\randhrs1992_2020v1_SAS\" access=readonly;
+libname LIBIN "\\maize.umhsnas.med.umich.edu\Geriatrics-HRS\External Drive\AHead_hrs_c\randhrs1992_2020v1_SAS" access=readonly;
 
 %let DATAIN = randhrs1992_2020v1;
 %let wide_datain = libin.&datain;

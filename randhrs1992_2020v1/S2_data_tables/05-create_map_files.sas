@@ -168,5 +168,3 @@ libname _stmnts clear;
 
 %_05map_file_create(SLong);
 
-
-
