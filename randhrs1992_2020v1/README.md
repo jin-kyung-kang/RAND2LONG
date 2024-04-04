@@ -1,9 +1,16 @@
-# !!! WORK IN PROGRESS
+# !!! (FOR DEVELOPERS only, WORK IN PROGRESS)
 
-IMPORTANT: After downloading `RAND2LONG` repository locate `project_setup.sas`
-file and modify `repo_name` and `repo_path` macro variables.
+This project aims to reshape and recode the RAND HRS Longitudinal File 2020 dataset `randhrs1992_2020v1` from wide to long format.
 
-* This project aims to reshape and recode the RAND HRS Longitudinal File 2020 dataset from wide to long format.
+
+IMPORTANT: 
+
+After downloading `RAND2LONG` repository modify:
+
+* `repo_path` macro variables in `autoexec.sas` file
+* `xlsx_nickname`, `xlsx_date`, `xlsx_path`, `HRSpkg_path` macro variables in `project_setup.sas` file.
+* path to LIBIN library in `project_setup.sas` file.
+
   
 * The Pepper Center grant has supported the project;
 

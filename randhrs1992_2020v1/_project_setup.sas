@@ -4,18 +4,21 @@
 
 /* Declare global macro variables */
 %global repo_path repo_name prj_name dir_name;
-%global xlsx_path xlsx_name dir_path table_version;
+%global xlsx_path xlsx_name xlsx_nickname dir_path table_version;
 %global datain formats_cntlin wide_datain;
 %global fcmp_src_path;
+%global HRSpkg_path;
+
+%let HRSpkg_path=S:\Jin\DDBC\HRS_package;
 
 %let prj_path = &repo_path\&prj_name;
 
 /*------ Excel file multiple maps ------*/
-%let xlsx_nickname = test3_maps;   /* */
-%let xlsx_date =21FEB2024;
+%let xlsx_nickname = _1992_2020v1_maps;   /* _1992_2020v1_maps or test3_maps */
+%let xlsx_date =22MAR2024;
 %let xlsx_path = \\maize.umhsnas.med.umich.edu\Geriatrics-HRS\External Drive\AHead_hrs_c\randhrs1992_2020v1_SAS;
-%let xlsx_name =&xlsx_nickname&xlsx_date;   
-%let table_version = &repo_version-&xlsx_date;
+%let xlsx_name =&xlsx_nickname&xlsx_date;       /* === Full xlsx name with mapping info ===*/
+%let table_version = &repo_version-&xlsx_date;  /* Auxiliary */
 
 
 /*--------- RAND and cntlin datasets in `LIBIN` libref    -----------*/
@@ -30,6 +33,7 @@ libname LIBIN "\\maize.umhsnas.med.umich.edu\Geriatrics-HRS\External Drive\AHead
 %put --- Global macro vars defined in `project_setup.inc`;
 %put repo_version    := &repo_version;
 %put repo_path       := &repo_path;
+%put HRSpkg_path     := &HRSpkg_path;
 %put prj_name        := &prj_name;
 %put;
 

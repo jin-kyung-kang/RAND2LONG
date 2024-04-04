@@ -35,9 +35,3 @@ filename fn clear;
 %let fn = 50-RSSI-wout-fmts.sas; 
 %mx;
 
-%let fn = 60-SLong-wout-fmts.sas;
-%mx;
-
-%let fn = 60-SLong-with-fmts.sas;
-%mx;
-

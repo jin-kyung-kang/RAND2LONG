@@ -1,36 +1,37 @@
 /* This is map_file `HLong_map_file.inc` for `HLong_table` dataset */
-/* Repo name := RAND2LONG-ver1 (version 0.70) */
+/* Repo name := RAND2LONG (version 0.852) */
 /* Project name := randhrs1992_2020v1 */
-/* Excel map: test3_maps21FEB2024.xlsx */
-/* Date stamp: 29FEB24  */
+/* Excel map: _1992_2020v1_maps22MAR2024.xlsx */
+/* Date stamp: 03APR24  */
 
 
 %macro label_statements;
-/* Table HLong: Label statements for 95 variables */
+/* Table HLong: Label statements for 96 variables */
 /* Macro invoked by `create_template_longout` macro */
   label HHID  = "HHold ID / 6-Char <KEY1>";
   label PN  = "Person Number (3-CHAR) <KEY2>";
-  label WAVE_NUMBER  = "HRS wave number <KEY3>";
-  label H_HHIDC  = "HHold ID + SubHHold /7-Char <KEY3>";
-  label SUBHH  = "HRS subHHold/1-Char";
+  label HHIDPN  = "HHIDPN: HHold ID + Person Number /Num";
   label RAHHIDPN  = "HHold ID + Person Number /9-Char";
-  label INW  = "1 if respondent/Num";
+  label HACOHORT  = "Sample cohort";
+  label WAVE_NUMBER  = "HRS wave number <KEY3>";
   label WAVE_NAME  = "Wave label/12-Char";
+  label STUDYYR  = "Study year /Num";
   label CYEAR  = "Study year /10-Char";
 
- /* --Variable HACOHORT : # _10 */
-  label HACOHORT  = "Sample cohort";
-  label studyyr  = "Study year /Num";
+ /* --Variable H_HHID : # _10 */
   label H_HHID  = "HHold ID + SubHHold /Num";
+  label H_HHIDC  = "HHold ID + SubHHold /7-Char <KEY3>";
+  label SUBHH  = "HRS subHHold/1-Char";
+  label INW  = "1 if respondent/Num";
   label H_PICKHH  = "Select subHH level file <KEY4>";
   label H_ABOND  = "Assets:Bonds--Cross-wave";
   label H_ABSNS  = "Assets:Business--Cross-wave";
   label H_ACD  = "Assets:CDs,SvBonds,T-bills--Cross-wave";
   label H_ACHCK  = "Assets:Checking,Savings Acct--Cross-wave";
   label H_ADEBT  = "Assets:Debts [not yet asked]--Cross-wave";
-  label H_AFBOND  = "Assets Flag:Bonds--Cross-wave";
 
- /* --Variable H_AFBSNS : # _20 */
+ /* --Variable H_AFBOND : # _20 */
+  label H_AFBOND  = "Assets Flag:Bonds--Cross-wave";
   label H_AFBSNS  = "Assets Flag:Business--Cross-wave";
   label H_AFCD  = "Assets Flag:CDs,SvBonds,T-bills--Cross-wave";
   label H_AFCHCK  = "Assets Flag:Checking,Savings--Cross-wave";
@@ -40,9 +41,9 @@
   label H_AFHOUS  = "Assets Flag:Primary Residence--Cross-wave";
   label H_AFIRA  = "Asst Flag:IRA [total]--Cross-wave";
   label H_AFMORT  = "Asst Flag:Total Mortgage--Cross-wave";
-  label H_AFMRTB  = "Assets Flag:2nd Home Mtg--Cross-wave";
 
- /* --Variable H_AFNETHB : # _30 */
+ /* --Variable H_AFMRTB : # _30 */
+  label H_AFMRTB  = "Assets Flag:2nd Home Mtg--Cross-wave";
   label H_AFNETHB  = "Assets Flag:Net Value of 2nd Home--Cross-wave";
   label H_AFOTHR  = "Assets Flag:Other svngs,assets--Cross-wave";
   label H_AFRLES  = "Assets Flag:Other Real estate--Cross-wave";
@@ -52,9 +53,9 @@
   label H_AHOUB  = "Assets:2nd Home--Cross-wave";
   label H_AHOUS  = "Assets:Primary Residence--Cross-wave";
   label H_AIRA  = "Assets:IRA [total]--Cross-wave";
-  label H_AMORT  = "Assets:Total Mortgage--Cross-wave";
 
- /* --Variable H_AMRTB : # _40 */
+ /* --Variable H_AMORT : # _40 */
+  label H_AMORT  = "Assets:Total Mortgage--Cross-wave";
   label H_AMRTB  = "Assets:2nd Home Mtg--Cross-wave";
   label H_ANETHB  = "Net Value of 2nd Home--Cross-wave";
   label H_ANYFAM  = "Whether any FamR in HH";
@@ -64,9 +65,9 @@
   label H_ASTCK  = "Assets:Stocks--Cross-wave";
   label H_ATOTB  = "Total of all Assets--Cross-wave";
   label H_ATOTF  = "Non-Housing Financial Wealth--Cross-wave";
-  label H_ATOTH  = "Net Value of House /prim res--Cross-wave";
 
- /* --Variable H_ATOTN : # _50 */
+ /* --Variable H_ATOTH : # _50 */
+  label H_ATOTH  = "Net Value of House /prim res--Cross-wave";
   label H_ATOTN  = "Total Non-Housing Assets--Cross-wave";
   label H_ATOTW  = "Total Wealth less IRA--Cross-wave";
   label H_ATRAN  = "Assets:Transportation--Cross-wave";
@@ -76,10 +77,10 @@
   label H_HHRESP  = "# core respondents in HH";
   label H_ICAP  = "Income:Household Capital Income";
   label H_IFCAP  = "ImpFlag:Household Capital Inc";
+
+ /* --Variable H_IFIRAW : # _60 */
   label H_IFIRAW  = "ImpFlag:IRA Withd-Total (prev 2 yrs/since last
 int)";
-
- /* --Variable H_IFIRAWY1 : # _60 */
   label H_IFIRAWY1  = "ImpFlag:IRA Withd-Total (LCY)";
   label H_IFOTHR  = "ImpFlag:Other Household Inc";
   label H_IFSSI  = "ImpFlag-SSI Inc";
@@ -90,9 +91,9 @@ int)";
   label H_IIRAWY1  = "Income:IRA Withd-Total (LCY)";
   label H_INPOV  = "Whether in Poverty-no inst";
   label H_INPOVA  = "Whether in Poverty-w/inst";
-  label H_INPOVAD  = "Whether in Poverty-w/inst (part d)";
 
- /* --Variable H_INPOVD : # _70 */
+ /* --Variable H_INPOVAD : # _70 */
+  label H_INPOVAD  = "Whether in Poverty-w/inst (part d)";
   label H_INPOVD  = "Whether in Poverty-no inst (part d)";
   label H_INPOVR  = "Ratio HH Inc:PovThr-no inst";
   label H_INPOVRD  = "Ratio HH Inc:PovThr-no inst (part d)";
@@ -102,9 +103,9 @@ int)";
   label H_ISSI  = "IncPart-SSI Inc";
   label H_ITOT  = "Income:Total HHold / R+Sp only";
   label H_ITOT2  = "Income:Imputed Total Household";
-  label H_NHMLIV  = "HHold nursing hm status";
 
- /* --Variable H_OHRSHH : # _80 */
+ /* --Variable H_NHMLIV : # _80 */
+  label H_NHMLIV  = "HHold nursing hm status";
   label H_OHRSHH  = "HRS core HHID + SubHHold /Num";
   label H_OOPMA  = "Mexp Amt:HH Out of pkt med exp for all,prv 12 mos";
   label H_OOPMAF  = "Mexp Flag:HH Out of pkt imputed for all";
@@ -114,9 +115,9 @@ int)";
   label H_POVHHI  = "HH Inc to chk Poverty-no inst";
   label H_POVHHID  = "HH Inc to chk Poverty-no inst (part d)";
   label H_POVTHR  = "Poverty Threshold-no inst";
-  label H_PVFAMA  = "FamType for PovThresh-w/inst";
 
- /* --Variable H_PVHHIA : # _90 */
+ /* --Variable H_PVFAMA : # _90 */
+  label H_PVFAMA  = "FamType for PovThresh-w/inst";
   label H_PVHHIA  = "HH inc to chk Poverty-w/inst";
   label H_PVHHIAD  = "HH inc to chk Poverty-w/inst (part d)";
   label H_PVTHRA  = "Poverty Threshold-w/inst";
@@ -131,11 +132,11 @@ int)";
 /* Macro invoked by `create_template_longout` macro */
   length HHID $6;                           /* _1 */
   length PN $3;                             /* _2 */
-  length H_HHIDC $7;                        /* _4 */
-  length SUBHH $1;                          /* _5 */
-  length RAHHIDPN $9;                       /* _6 */
-  length WAVE_NAME $12;                     /* _8 */
+  length RAHHIDPN $9;                       /* _4 */
+  length WAVE_NAME $12;                     /* _7 */
   length CYEAR $10;                         /* _9 */
+  length H_HHIDC $7;                        /* _11 */
+  length SUBHH $1;                          /* _12 */
 %mend clength_statements;
 
 
@@ -143,42 +144,42 @@ int)";
 %macro format_statements;
 /*  Table HLong: format statements for 36 variables */
 /* Macro invoked by `create_template_longout` macro */
-  format H_PICKHH PICKHH.;                  /* _13 */
-  format H_AFBOND ASSTIMPF.;                /* _19 */
-  format H_AFBSNS ASSTIMPF.;                /* _20 */
-  format H_AFCD ASSTIMPF.;                  /* _21 */
-  format H_AFCHCK ASSTIMPF.;                /* _22 */
-  format H_AFDEBT ASSTIMPF.;                /* _23 */
-  format H_AFHMLN ASSTSUMF.;                /* _24 */
-  format H_AFHOUB ASSTIMPF.;                /* _25 */
-  format H_AFHOUS ASSTIMPF.;                /* _26 */
-  format H_AFIRA ASSTSUMF.;                 /* _27 */
-  format H_AFMORT ASSTSUMF.;                /* _28 */
-  format H_AFMRTB ASSTIMPF.;                /* _29 */
-  format H_AFNETHB NETHBF.;                 /* _30 */
-  format H_AFOTHR ASSTIMPF.;                /* _31 */
-  format H_AFRLES ASSTIMPF.;                /* _32 */
-  format H_AFSTCK ASSTIMPF.;                /* _33 */
-  format H_AFTRAN ASSTIMPF.;                /* _34 */
-  format H_ANYFAM YESNO.;                   /* _42 */
-  format H_ANYFIN YESNO.;                   /* _43 */
-  format H_CPL CPL.;                        /* _54 */
-  format H_IFCAP INCSUMF.;                  /* _58 */
-  format H_IFIRAW INCSUMF.;                 /* _59 */
-  format H_IFIRAWY1 INCSUMF.;               /* _60 */
-  format H_IFOTHR INCSUMF.;                 /* _61 */
-  format H_IFSSI INCIMPF.;                  /* _62 */
-  format H_IFTOT INCSUMF.;                  /* _63 */
-  format H_IFTOT2 INCSUMF.;                 /* _64 */
-  format H_INPOV INPOV.;                    /* _67 */
-  format H_INPOVA INPOV.;                   /* _68 */
-  format H_INPOVAD INPOV.;                  /* _69 */
-  format H_INPOVD INPOV.;                   /* _70 */
-  format H_NHMLIV HNHMLIV.;                 /* _79 */
-  format H_OOPMAF MDIMPH.;                  /* _82 */
-  format H_OOPMDF MDIMPH.;                  /* _84 */
-  format H_POVFAM POVFAM.;                  /* _85 */
-  format H_PVFAMA POVFAM.;                  /* _89 */
+  format H_PICKHH PICKHH.;                  /* _14 */
+  format H_AFBOND ASSTIMPF.;                /* _20 */
+  format H_AFBSNS ASSTIMPF.;                /* _21 */
+  format H_AFCD ASSTIMPF.;                  /* _22 */
+  format H_AFCHCK ASSTIMPF.;                /* _23 */
+  format H_AFDEBT ASSTIMPF.;                /* _24 */
+  format H_AFHMLN ASSTSUMF.;                /* _25 */
+  format H_AFHOUB ASSTIMPF.;                /* _26 */
+  format H_AFHOUS ASSTIMPF.;                /* _27 */
+  format H_AFIRA ASSTSUMF.;                 /* _28 */
+  format H_AFMORT ASSTSUMF.;                /* _29 */
+  format H_AFMRTB ASSTIMPF.;                /* _30 */
+  format H_AFNETHB NETHBF.;                 /* _31 */
+  format H_AFOTHR ASSTIMPF.;                /* _32 */
+  format H_AFRLES ASSTIMPF.;                /* _33 */
+  format H_AFSTCK ASSTIMPF.;                /* _34 */
+  format H_AFTRAN ASSTIMPF.;                /* _35 */
+  format H_ANYFAM YESNO.;                   /* _43 */
+  format H_ANYFIN YESNO.;                   /* _44 */
+  format H_CPL CPL.;                        /* _55 */
+  format H_IFCAP INCSUMF.;                  /* _59 */
+  format H_IFIRAW INCSUMF.;                 /* _60 */
+  format H_IFIRAWY1 INCSUMF.;               /* _61 */
+  format H_IFOTHR INCSUMF.;                 /* _62 */
+  format H_IFSSI INCIMPF.;                  /* _63 */
+  format H_IFTOT INCSUMF.;                  /* _64 */
+  format H_IFTOT2 INCSUMF.;                 /* _65 */
+  format H_INPOV INPOV.;                    /* _68 */
+  format H_INPOVA INPOV.;                   /* _69 */
+  format H_INPOVAD INPOV.;                  /* _70 */
+  format H_INPOVD INPOV.;                   /* _71 */
+  format H_NHMLIV HNHMLIV.;                 /* _80 */
+  format H_OOPMAF MDIMPH.;                  /* _83 */
+  format H_OOPMDF MDIMPH.;                  /* _85 */
+  format H_POVFAM POVFAM.;                  /* _86 */
+  format H_PVFAMA POVFAM.;                  /* _90 */
 %mend format_statements;
 
 
@@ -187,24 +188,26 @@ int)";
 /* List of variables to be read from input dataset */
   HHID                                      /* 1 */
   PN                                        /* 2 */
-  RAHHIDPN                                  /* 6 */
-  HACOHORT                                  /* 10 */
+  HHIDPN                                    /* 3 */
+  RAHHIDPN                                  /* 4 */
+  HACOHORT                                  /* 5 */
 %mend readvar1_list;
 
 %macro keep_varlist;
-/* Table HLong: List of 95 variables to keep */
+/* Table HLong: List of 96 variables to keep */
   HHID
   PN
+  HHIDPN
+  RAHHIDPN
+  HACOHORT
   WAVE_NUMBER
+  WAVE_NAME
+  STUDYYR
+  CYEAR
+  H_HHID
   H_HHIDC
   SUBHH
-  RAHHIDPN
   INW
-  WAVE_NAME
-  CYEAR
-  HACOHORT
-  studyyr
-  H_HHID
   H_PICKHH
   H_ABOND
   H_ABSNS
@@ -325,16 +328,17 @@ run;
 /*  Initialize output variables, unless they are included in the input dataset */
   /* HHID variable already included  */
   /* PN variable already included  */
+  /* HHIDPN variable already included  */
+  /* RAHHIDPN variable already included  */
+  /* HACOHORT variable already included  */
   WAVE_NUMBER = ._;
+  WAVE_NAME = '*';
+  STUDYYR = ._;
+  CYEAR = '*';
+  H_HHID = ._;
   H_HHIDC = '*';
   SUBHH = '*';
-  /* RAHHIDPN variable already included  */
   INW = ._;
-  WAVE_NAME = '*';
-  CYEAR = '*';
-  /* HACOHORT variable already included  */
-  studyyr = ._;
-  H_HHID = ._;
   H_PICKHH = ._;
   H_ABOND = ._;
   H_ABSNS = ._;
@@ -423,6 +427,25 @@ run;
 %macro readvar2_list;
 /* List of variables to be read from input dataset */
 /*-- WAVE_NUMBER   --*/
+/*-- WAVE_NAME   --*/
+/*-- STUDYYR   --*/
+/*-- CYEAR   --*/
+/*-- H_HHID   --*/
+H1HHID
+H2HHID
+H3HHID
+H4HHID
+H5HHID
+H6HHID
+H7HHID
+H8HHID
+H9HHID
+H10HHID
+H11HHID
+H12HHID
+H13HHID
+H14HHID
+H15HHID
 /*-- H_HHIDC   --*/
 H1HHIDC
 H2HHIDC
@@ -456,25 +479,6 @@ INW12
 INW13
 INW14
 INW15
-/*-- WAVE_NAME   --*/
-/*-- CYEAR   --*/
-/*-- studyyr   --*/
-/*-- H_HHID   --*/
-H1HHID
-H2HHID
-H3HHID
-H4HHID
-H5HHID
-H6HHID
-H7HHID
-H8HHID
-H9HHID
-H10HHID
-H11HHID
-H12HHID
-H13HHID
-H14HHID
-H15HHID
 /*-- H_PICKHH   --*/
 H1PICKHH
 H2PICKHH
@@ -1564,17 +1568,18 @@ H13SSWRXA
 %put Hlong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
+/* --- RAND variable:HHIDPN  included */ ;
+/* --- RAND variable:RAHHIDPN  included */ ;
+/* --- RAND variable:HACOHORT  included */ ;
 WAVE_NUMBER=1 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
+STUDYYR= hrs_studyyr(wave_number,
+hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr1992' ;
+H_HHID=H1HHID ;
 H_HHIDC=H1HHIDC ;
 SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
-/* --- RAND variable:RAHHIDPN  included */ ;
 INW=INW1 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr1992' ;
-/* --- RAND variable:HACOHORT  included */ ;
-studyyr= hrs_studyyr(wave_number,
-hacohort)     /* --- Derived variable  */ ;
-H_HHID=H1HHID ;
 H_PICKHH=H1PICKHH ;
 H_ABOND=H1ABOND ;
 H_ABSNS=H1ABSNS ;
@@ -1664,17 +1669,18 @@ if inw=1 then output ;
 %put Hlong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
+/* --- RAND variable:HHIDPN  included */ ;
+/* --- RAND variable:RAHHIDPN  included */ ;
+/* --- RAND variable:HACOHORT  included */ ;
 WAVE_NUMBER=2 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
+STUDYYR= hrs_studyyr(wave_number,
+hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr1993_94' ;
+H_HHID=H2HHID ;
 H_HHIDC=H2HHIDC ;
 SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
-/* --- RAND variable:RAHHIDPN  included */ ;
 INW=INW2 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr1993_94' ;
-/* --- RAND variable:HACOHORT  included */ ;
-studyyr= hrs_studyyr(wave_number,
-hacohort)     /* --- Derived variable  */ ;
-H_HHID=H2HHID ;
 H_PICKHH=H2PICKHH ;
 H_ABOND=H2ABOND ;
 H_ABSNS=H2ABSNS ;
@@ -1764,17 +1770,18 @@ if inw=1 then output ;
 %put Hlong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
+/* --- RAND variable:HHIDPN  included */ ;
+/* --- RAND variable:RAHHIDPN  included */ ;
+/* --- RAND variable:HACOHORT  included */ ;
 WAVE_NUMBER=3 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
+STUDYYR= hrs_studyyr(wave_number,
+hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr1995_96' ;
+H_HHID=H3HHID ;
 H_HHIDC=H3HHIDC ;
 SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
-/* --- RAND variable:RAHHIDPN  included */ ;
 INW=INW3 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr1995_96' ;
-/* --- RAND variable:HACOHORT  included */ ;
-studyyr= hrs_studyyr(wave_number,
-hacohort)     /* --- Derived variable  */ ;
-H_HHID=H3HHID ;
 H_PICKHH=H3PICKHH ;
 H_ABOND=H3ABOND ;
 H_ABSNS=H3ABSNS ;
@@ -1864,17 +1871,18 @@ if inw=1 then output ;
 %put Hlong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
+/* --- RAND variable:HHIDPN  included */ ;
+/* --- RAND variable:RAHHIDPN  included */ ;
+/* --- RAND variable:HACOHORT  included */ ;
 WAVE_NUMBER=4 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
+STUDYYR= hrs_studyyr(wave_number,
+hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr1998' ;
+H_HHID=H4HHID ;
 H_HHIDC=H4HHIDC ;
 SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
-/* --- RAND variable:RAHHIDPN  included */ ;
 INW=INW4 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr1998' ;
-/* --- RAND variable:HACOHORT  included */ ;
-studyyr= hrs_studyyr(wave_number,
-hacohort)     /* --- Derived variable  */ ;
-H_HHID=H4HHID ;
 H_PICKHH=H4PICKHH ;
 H_ABOND=H4ABOND ;
 H_ABSNS=H4ABSNS ;
@@ -1964,17 +1972,18 @@ if inw=1 then output ;
 %put Hlong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
+/* --- RAND variable:HHIDPN  included */ ;
+/* --- RAND variable:RAHHIDPN  included */ ;
+/* --- RAND variable:HACOHORT  included */ ;
 WAVE_NUMBER=5 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
+STUDYYR= hrs_studyyr(wave_number,
+hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2000' ;
+H_HHID=H5HHID ;
 H_HHIDC=H5HHIDC ;
 SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
-/* --- RAND variable:RAHHIDPN  included */ ;
 INW=INW5 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2000' ;
-/* --- RAND variable:HACOHORT  included */ ;
-studyyr= hrs_studyyr(wave_number,
-hacohort)     /* --- Derived variable  */ ;
-H_HHID=H5HHID ;
 H_PICKHH=H5PICKHH ;
 H_ABOND=H5ABOND ;
 H_ABSNS=H5ABSNS ;
@@ -2064,17 +2073,18 @@ if inw=1 then output ;
 %put Hlong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
+/* --- RAND variable:HHIDPN  included */ ;
+/* --- RAND variable:RAHHIDPN  included */ ;
+/* --- RAND variable:HACOHORT  included */ ;
 WAVE_NUMBER=6 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
+STUDYYR= hrs_studyyr(wave_number,
+hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2002' ;
+H_HHID=H6HHID ;
 H_HHIDC=H6HHIDC ;
 SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
-/* --- RAND variable:RAHHIDPN  included */ ;
 INW=INW6 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2002' ;
-/* --- RAND variable:HACOHORT  included */ ;
-studyyr= hrs_studyyr(wave_number,
-hacohort)     /* --- Derived variable  */ ;
-H_HHID=H6HHID ;
 H_PICKHH=H6PICKHH ;
 H_ABOND=H6ABOND ;
 H_ABSNS=H6ABSNS ;
@@ -2164,17 +2174,18 @@ if inw=1 then output ;
 %put Hlong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
+/* --- RAND variable:HHIDPN  included */ ;
+/* --- RAND variable:RAHHIDPN  included */ ;
+/* --- RAND variable:HACOHORT  included */ ;
 WAVE_NUMBER=7 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
+STUDYYR= hrs_studyyr(wave_number,
+hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2004' ;
+H_HHID=H7HHID ;
 H_HHIDC=H7HHIDC ;
 SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
-/* --- RAND variable:RAHHIDPN  included */ ;
 INW=INW7 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2004' ;
-/* --- RAND variable:HACOHORT  included */ ;
-studyyr= hrs_studyyr(wave_number,
-hacohort)     /* --- Derived variable  */ ;
-H_HHID=H7HHID ;
 H_PICKHH=H7PICKHH ;
 H_ABOND=H7ABOND ;
 H_ABSNS=H7ABSNS ;
@@ -2264,17 +2275,18 @@ if inw=1 then output ;
 %put Hlong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
+/* --- RAND variable:HHIDPN  included */ ;
+/* --- RAND variable:RAHHIDPN  included */ ;
+/* --- RAND variable:HACOHORT  included */ ;
 WAVE_NUMBER=8 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
+STUDYYR= hrs_studyyr(wave_number,
+hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2006' ;
+H_HHID=H8HHID ;
 H_HHIDC=H8HHIDC ;
 SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
-/* --- RAND variable:RAHHIDPN  included */ ;
 INW=INW8 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2006' ;
-/* --- RAND variable:HACOHORT  included */ ;
-studyyr= hrs_studyyr(wave_number,
-hacohort)     /* --- Derived variable  */ ;
-H_HHID=H8HHID ;
 H_PICKHH=H8PICKHH ;
 H_ABOND=H8ABOND ;
 H_ABSNS=H8ABSNS ;
@@ -2364,17 +2376,18 @@ if inw=1 then output ;
 %put Hlong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
+/* --- RAND variable:HHIDPN  included */ ;
+/* --- RAND variable:RAHHIDPN  included */ ;
+/* --- RAND variable:HACOHORT  included */ ;
 WAVE_NUMBER=9 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
+STUDYYR= hrs_studyyr(wave_number,
+hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2008' ;
+H_HHID=H9HHID ;
 H_HHIDC=H9HHIDC ;
 SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
-/* --- RAND variable:RAHHIDPN  included */ ;
 INW=INW9 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2008' ;
-/* --- RAND variable:HACOHORT  included */ ;
-studyyr= hrs_studyyr(wave_number,
-hacohort)     /* --- Derived variable  */ ;
-H_HHID=H9HHID ;
 H_PICKHH=H9PICKHH ;
 H_ABOND=H9ABOND ;
 H_ABSNS=H9ABSNS ;
@@ -2464,17 +2477,18 @@ if inw=1 then output ;
 %put Hlong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
+/* --- RAND variable:HHIDPN  included */ ;
+/* --- RAND variable:RAHHIDPN  included */ ;
+/* --- RAND variable:HACOHORT  included */ ;
 WAVE_NUMBER=10 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
+STUDYYR= hrs_studyyr(wave_number,
+hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2010' ;
+H_HHID=H10HHID ;
 H_HHIDC=H10HHIDC ;
 SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
-/* --- RAND variable:RAHHIDPN  included */ ;
 INW=INW10 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2010' ;
-/* --- RAND variable:HACOHORT  included */ ;
-studyyr= hrs_studyyr(wave_number,
-hacohort)     /* --- Derived variable  */ ;
-H_HHID=H10HHID ;
 H_PICKHH=H10PICKHH ;
 H_ABOND=H10ABOND ;
 H_ABSNS=H10ABSNS ;
@@ -2564,17 +2578,18 @@ if inw=1 then output ;
 %put Hlong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
+/* --- RAND variable:HHIDPN  included */ ;
+/* --- RAND variable:RAHHIDPN  included */ ;
+/* --- RAND variable:HACOHORT  included */ ;
 WAVE_NUMBER=11 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
+STUDYYR= hrs_studyyr(wave_number,
+hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2012' ;
+H_HHID=H11HHID ;
 H_HHIDC=H11HHIDC ;
 SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
-/* --- RAND variable:RAHHIDPN  included */ ;
 INW=INW11 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2012' ;
-/* --- RAND variable:HACOHORT  included */ ;
-studyyr= hrs_studyyr(wave_number,
-hacohort)     /* --- Derived variable  */ ;
-H_HHID=H11HHID ;
 H_PICKHH=H11PICKHH ;
 H_ABOND=H11ABOND ;
 H_ABSNS=H11ABSNS ;
@@ -2664,17 +2679,18 @@ if inw=1 then output ;
 %put Hlong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
+/* --- RAND variable:HHIDPN  included */ ;
+/* --- RAND variable:RAHHIDPN  included */ ;
+/* --- RAND variable:HACOHORT  included */ ;
 WAVE_NUMBER=12 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
+STUDYYR= hrs_studyyr(wave_number,
+hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2014' ;
+H_HHID=H12HHID ;
 H_HHIDC=H12HHIDC ;
 SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
-/* --- RAND variable:RAHHIDPN  included */ ;
 INW=INW12 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2014' ;
-/* --- RAND variable:HACOHORT  included */ ;
-studyyr= hrs_studyyr(wave_number,
-hacohort)     /* --- Derived variable  */ ;
-H_HHID=H12HHID ;
 H_PICKHH=H12PICKHH ;
 H_ABOND=H12ABOND ;
 H_ABSNS=H12ABSNS ;
@@ -2764,17 +2780,18 @@ if inw=1 then output ;
 %put Hlong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
+/* --- RAND variable:HHIDPN  included */ ;
+/* --- RAND variable:RAHHIDPN  included */ ;
+/* --- RAND variable:HACOHORT  included */ ;
 WAVE_NUMBER=13 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
+STUDYYR= hrs_studyyr(wave_number,
+hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2016' ;
+H_HHID=H13HHID ;
 H_HHIDC=H13HHIDC ;
 SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
-/* --- RAND variable:RAHHIDPN  included */ ;
 INW=INW13 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2016' ;
-/* --- RAND variable:HACOHORT  included */ ;
-studyyr= hrs_studyyr(wave_number,
-hacohort)     /* --- Derived variable  */ ;
-H_HHID=H13HHID ;
 H_PICKHH=H13PICKHH ;
 H_ABOND=H13ABOND ;
 H_ABSNS=H13ABSNS ;
@@ -2864,17 +2881,18 @@ if inw=1 then output ;
 %put Hlong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
+/* --- RAND variable:HHIDPN  included */ ;
+/* --- RAND variable:RAHHIDPN  included */ ;
+/* --- RAND variable:HACOHORT  included */ ;
 WAVE_NUMBER=14 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
+STUDYYR= hrs_studyyr(wave_number,
+hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2018' ;
+H_HHID=H14HHID ;
 H_HHIDC=H14HHIDC ;
 SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
-/* --- RAND variable:RAHHIDPN  included */ ;
 INW=INW14 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2018' ;
-/* --- RAND variable:HACOHORT  included */ ;
-studyyr= hrs_studyyr(wave_number,
-hacohort)     /* --- Derived variable  */ ;
-H_HHID=H14HHID ;
 H_PICKHH=H14PICKHH ;
 H_ABOND=H14ABOND ;
 H_ABSNS=H14ABSNS ;
@@ -2964,17 +2982,18 @@ if inw=1 then output ;
 %put Hlong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
+/* --- RAND variable:HHIDPN  included */ ;
+/* --- RAND variable:RAHHIDPN  included */ ;
+/* --- RAND variable:HACOHORT  included */ ;
 WAVE_NUMBER=15 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
+STUDYYR= hrs_studyyr(wave_number,
+hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2020' ;
+H_HHID=H15HHID ;
 H_HHIDC=H15HHIDC ;
 SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
-/* --- RAND variable:RAHHIDPN  included */ ;
 INW=INW15 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2020' ;
-/* --- RAND variable:HACOHORT  included */ ;
-studyyr= hrs_studyyr(wave_number,
-hacohort)     /* --- Derived variable  */ ;
-H_HHID=H15HHID ;
 H_PICKHH=H15PICKHH ;
 H_ABOND=H15ABOND ;
 H_ABSNS=H15ABSNS ;

@@ -1,36 +1,37 @@
 /* This is map_file `SLong_map_file.inc` for `SLong_table` dataset */
-/* Repo name := RAND2LONG-ver1 (version 0.70) */
+/* Repo name := RAND2LONG (version 0.852) */
 /* Project name := randhrs1992_2020v1 */
-/* Excel map: test3_maps21FEB2024.xlsx */
-/* Date stamp: 29FEB24  */
+/* Excel map: _1992_2020v1_maps22MAR2024.xlsx */
+/* Date stamp: 03APR24  */
 
 
 %macro label_statements;
-/* Table SLong: Label statements for 805 variables */
+/* Table SLong: Label statements for 806 variables */
 /* Macro invoked by `create_template_longout` macro */
   label HHID  = "HHold ID / 6-Char <KEY1>";
   label PN  = "Person Number (3-CHAR) <KEY2>";
-  label WAVE_NUMBER  = "HRS wave number <KEY3>";
-  label H_HHIDC  = "HHold ID + SubHHold /7-Char <KEY3>";
-  label SUBHH  = "HRS subHHold/1-Char";
+  label HHIDPN  = "HHIDPN: HHold ID + Person Number /Num";
   label RAHHIDPN  = "HHold ID + Person Number /9-Char";
-  label INW  = "1 if respondent/Num";
+  label HACOHORT  = "Sample cohort";
+  label WAVE_NUMBER  = "HRS wave number <KEY3>";
   label WAVE_NAME  = "Wave label/12-Char";
+  label studyyr  = "Study year /Num";
   label CYEAR  = "Study year /10-Char";
 
- /* --Variable HACOHORT : # _10 */
-  label HACOHORT  = "Sample cohort";
-  label studyyr  = "Study year /Num";
+ /* --Variable H_HHID : # _10 */
   label H_HHID  = "HHold ID + SubHHold /Num";
+  label H_HHIDC  = "HHold ID + SubHHold /7-Char <KEY3>";
+  label SUBHH  = "HRS subHHold/1-Char";
+  label INW  = "1 if respondent/Num";
   label S_HHIDPN  = "Spouse HHIDPN";
   label SASSAGEB  = "SASSAGEB: Age Sp Start Rec. SocSec";
   label SASSAGEM  = "SASSAGEM: Age/mnths Sp Start Rec. SocSec";
   label SASSRECV  = "SASSRECV: Any Spouse Receives SocSec";
   label S_ACGTOT  = "AHD TOTAL COGNITION SUMMARY SCORE";
   label S_ADL5A  = "Any Diff-sum of ADLs /0-5";
-  label S_ADL5H  = "S Gets Help-sum of ADLs /0-5";
 
- /* --Variable S_ADL6A : # _20 */
+ /* --Variable S_ADL5H : # _20 */
+  label S_ADL5H  = "S Gets Help-sum of ADLs /0-5";
   label S_ADL6A  = "Any Diff-sum of ADLs /0-6";
   label S_ADL6H  = "S Gets Help-sum of ADLs /0-6";
   label S_ADLR10  = "DELAYED WORD RECALL-AHD93";
@@ -40,9 +41,9 @@
   label S_AGEM_M  = "S Age (months) at Ivw MidMon";
   label S_AGEY_B  = "S Age (years) at Ivw BegMon";
   label S_AGEY_E  = "S Age (years) at Ivw EndMon";
-  label S_AGEY_M  = "S Age (years) at Ivw MidMon";
 
- /* --Variable S_AHDSMP : # _30 */
+ /* --Variable S_AGEY_M : # _30 */
+  label S_AGEY_M  = "S Age (years) at Ivw MidMon";
   label S_AHDSMP  = "Sample-Age Elig/Ahd93 Resp";
   label S_AIMR10  = "IMMEDIATE WORD RECALL-AHD93";
   label S_ALONE  = "S can be left alone";
@@ -52,9 +53,9 @@
   label S_ALZHEF  = "Flag chg prev report of Alzheimer";
   label S_ALZHEQ  = "Q-wording of Alzheimer this wv";
   label S_ALZHES  = "S had Alzheimer onset snce last IW";
-  label S_AMSTOT  = "AHD MENTAL STATUS SUMMARY SCORE";
 
- /* --Variable S_ANS3PQ : # _40 */
+ /* --Variable S_AMSTOT : # _40 */
+  label S_AMSTOT  = "AHD MENTAL STATUS SUMMARY SCORE";
   label S_ANS3PQ  = "S answered the first three probability questions";
   label S1_ARMS  = "S Diff-Reach/extnd arms up";
   label S2_ARMS  = "S Diff-Reach/extnd arms up";
@@ -64,9 +65,9 @@
   label S_ARTHR  = "S reports arthritis this wv";
   label S_ARTHRE  = "S ever had arthritis";
   label S_ARTHREF  = "1st wv special missing arthritis";
-  label S_ARTHRF  = "Flag dispute chg arthritis";
 
- /* --Variable S_ARTHRQ : # _50 */
+ /* --Variable S_ARTHRF : # _50 */
+  label S_ARTHRF  = "Flag dispute chg arthritis";
   label S_ARTHRQ  = "Q-wording arthritis this wv";
   label S_ARTHRS  = "S had arthritis snce last IW";
   label S_ATR20  = "AHD WORD TOTAL RECALL SUMMARY SCORE";
@@ -76,9 +77,9 @@
   label S_BALFULT  = "S full tandem bal test-Cmpltd";
   label S_BALSBS  = "S side-by-side bal test time";
   label S_BALSBSC  = "S side-by-side bal test-Comp mvmt";
-  label S_BALSEMI  = "S semi tandem bal test time";
 
- /* --Variable S_BALSEMIC : # _60 */
+ /* --Variable S_BALSEMI : # _60 */
+  label S_BALSEMI  = "S semi tandem bal test time";
   label S_BALSEMIC  = "S semi tandem bal test-Comp mvmts";
   label S1_BATH  = "S Diff-Bathing or showerng";
   label S2_BATH  = "S Diff-Bathing or showerng";
@@ -88,9 +89,9 @@
   label S_BATHH  = "S Gets Help-Bathing, showerng";
   label S_BATHW  = "S Any Diff-Bathing, shower";
   label S_BDATE  = "birth date";
-  label S1_BED  = "S Diff-Get in/out of bed";
 
- /* --Variable S2_BED : # _70 */
+ /* --Variable S1_BED : # _70 */
+  label S1_BED  = "S Diff-Get in/out of bed";
   label S2_BED  = "S Diff-Get in/out of bed";
   label S_BED  = "S Diff-Get in/out of bed";
   label S_BEDA  = "S Any Diff-Get in/out bed";
@@ -100,9 +101,9 @@
   label S_BEDW  = "S Any Diff-Get in/out of bed";
   label S_BEQ100  = "S Prob leave bequest 100K+";
   label S_BEQ10K  = "S Prob leave bequest 10K+";
-  label S_BEQ500  = "S Prob leave bequest 500K+";
 
- /* --Variable S_BEQANY : # _80 */
+ /* --Variable S_BEQ500 : # _80 */
+  label S_BEQ500  = "S Prob leave bequest 500K+";
   label S_BEQANY  = "S Prob leave bequest any";
   label S_BEQLRG  = "S Prob leave sizable bequest";
   label S_BFLAG  = "flag birthdate missings";
@@ -112,9 +113,9 @@
   label S_BPLACE  = "Place of Birth (Cens Region)";
   label S_BPLACF  = "diff RABPLACE/USBORN(trk)";
   label S_BPPOS  = "S position during BP measures";
-  label S_BPPULS  = "S pulse";
 
- /* --Variable S_BPSYS : # _90 */
+ /* --Variable S_BPPULS : # _90 */
+  label S_BPPULS  = "S pulse";
   label S_BPSYS  = "S systolic blood pressure";
   label S_BREAST  = "Prev Breast Check";
   label S_BWC20  = "BACKWARDS COUNT FROM 20";
@@ -124,9 +125,9 @@
   label S1_CALC  = "S Diff-Use a calculator";
   label S2_CALC  = "S Diff-Use a calculator";
   label S_CALCA  = "S Any Diff-Use a calculator";
-  label S_CALCW  = "S Any Diff-Use a calculator";
 
- /* --Variable S_CANCR : # _100 */
+ /* --Variable S_CALCW : # _100 */
+  label S_CALCW  = "S Any Diff-Use a calculator";
   label S_CANCR  = "S reports cancer this wv";
   label S_CANCRE  = "S ever had cancer";
   label S_CANCREF  = "1st wv special missing cancer";
@@ -136,9 +137,9 @@
   label S_CENDIV  = "Census Division";
   label S_CENREG  = "Census Region";
   label S_CESD  = "CESD score";
-  label S_CESDM  = "missings in CESD score";
 
- /* --Variable S1_CHAIR : # _110 */
+ /* --Variable S_CESDM : # _110 */
+  label S_CESDM  = "missings in CESD score";
   label S1_CHAIR  = "S Diff-Get up fr chair";
   label S2_CHAIR  = "S Diff-Get up fr chair";
   label S_CHAIR  = "S Diff-Get up fr chair";
@@ -148,9 +149,9 @@
   label S_CLAIMED  = "S already claiming SS benefits";
   label S1_CLIM1  = "S Diff-Climb one flt stair";
   label S2_CLIM1  = "S Diff-Climb one flt stair";
-  label S_CLIM1  = "S Diff-Climb one flt stair";
 
- /* --Variable S_CLIM1A : # _120 */
+ /* --Variable S_CLIM1 : # _120 */
+  label S_CLIM1  = "S Diff-Climb one flt stair";
   label S_CLIM1A  = "S Any Diff-Clmb 1 flt stair";
   label S_CLIM1W  = "S Any Diff-Climb 1 flt stair";
   label S1_CLIMS  = "S Diff-Climb sev flt stair";
@@ -160,9 +161,9 @@
   label S_CLIMSW  = "S Any Diff-Climb sev flt str";
   label S_COGTOT  = "TOTAL COGNITION SUMMARY SCORE(W14: FTF/TEL*)";
   label S_COHBYR  = "based on birth yr";
-  label S_COHORT  = "cohort";
 
- /* --Variable S_COMP : # _130 */
+ /* --Variable S_COHORT : # _130 */
+  label S_COHORT  = "cohort";
   label S_COMP  = "S Diff-Use a computer";
   label S_COMPW  = "S Any Diff-Use a computer";
   label S_CONDE  = "Sum of conditions ever had";
@@ -172,9 +173,9 @@
   label S_CONDSP  = "Flag Prv IVW not Wv-1/since";
   label S_COVR  = "S covered by R empl plan";
   label S_COVRT  = "S plan covers retirees";
-  label S_COVS  = "S covered by S empl plan";
 
- /* --Variable S_DADAGE : # _140 */
+ /* --Variable S_COVS : # _140 */
+  label S_COVS  = "S covered by S empl plan";
   label S_DADAGE  = "Father age current/at death";
   label S_DADLIV  = "Father alive";
   label S_DAGE_M  = "at Death in Months";
@@ -184,9 +185,9 @@
   label S_DCBAL3  = "Current balance of DC plan #3";
   label S_DCBAL4  = "Current balance of DC plan #4";
   label S_DCBENE1  = "Employer contribution to DC plan #1";
-  label S_DCBENE2  = "Employer contribution to DC plan #2";
 
- /* --Variable S_DCBENE3 : # _150 */
+ /* --Variable S_DCBENE2 : # _150 */
+  label S_DCBENE2  = "Employer contribution to DC plan #2";
   label S_DCBENE3  = "Employer contribution to DC plan #3";
   label S_DCBENE4  = "Employer contribution to DC plan #4";
   label S_DCCONT1  = "Employee contribution to DC plan #1";
@@ -196,9 +197,9 @@
   label S_DCMODE1  = "Employer contribution:$ or % #1";
   label S_DCMODE2  = "Employer contribution:$ or % #2";
   label S_DCMODE3  = "Employer contribution:$ or % #3";
-  label S_DCMODE4  = "Employer contribution:$ or % #4";
 
- /* --Variable S_DCPCT1 : # _160 */
+ /* --Variable S_DCMODE4 : # _160 */
+  label S_DCMODE4  = "Employer contribution:$ or % #4";
   label S_DCPCT1  = "Employer % contribution #1";
   label S_DCPCT2  = "Employer % contribution #2";
   label S_DCPCT3  = "Employer % contribution #3";
@@ -208,9 +209,9 @@
   label S_DEMENE  = "S ever reported dementia";
   label S_DEMENEF  = "1st wv special missing dementia";
   label S_DEMENF  = "Flag chg prev report of dementia";
-  label S_DEMENQ  = "Q-wording of dementia this wv";
 
- /* --Variable S_DEMENS : # _170 */
+ /* --Variable S_DEMENQ : # _170 */
+  label S_DEMENQ  = "Q-wording of dementia this wv";
   label S_DEMENS  = "S had dementia onset snce last IW";
   label S_DENTST  = "Dental visit prv 2 yrs (W2:  prv 1-,2-yr(A,H)*)";
   label S_DEPRES  = "CESD:Felt depressed";
@@ -220,9 +221,9 @@
   label S_DIABEF  = "1st wv special missing diabetes";
   label S_DIABF  = "Flag dispute chg diabetes";
   label S_DIABQ  = "Q-wording diabetes this wv";
-  label S_DIABS  = "S had diabetes since last IW";
 
- /* --Variable S1_DIME : # _180 */
+ /* --Variable S_DIABS : # _180 */
+  label S_DIABS  = "S had diabetes since last IW";
   label S1_DIME  = "S Diff-Pick up a dime";
   label S2_DIME  = "S Diff-Pick up a dime";
   label S_DIME  = "S Diff-Pick up a dime";
@@ -232,9 +233,9 @@
   label S_DLRC20  = "DELAYED WORD RECALL";
   label S_DMONTH  = "death month";
   label S_DOCTIM  = "# Doctor vists prv 2 yrs (W1: prv 12 mos*)";
-  label S_DOCTOR  = "Doctor visit prv 2 yrs (W1: prv 12 mos*)";
 
- /* --Variable S1_DRESS : # _190 */
+ /* --Variable S_DOCTOR : # _190 */
+  label S_DOCTOR  = "Doctor visit prv 2 yrs (W1: prv 12 mos*)";
   label S1_DRESS  = "S Diff-Dressing";
   label S2_DRESS  = "S Diff-Dressing";
   label S_DRESS  = "S Diff-Dressing";
@@ -244,9 +245,9 @@
   label S_DRESSW  = "S Any Diff-Dressing";
   label S_DRINK  = "S ever drinks any alcohol";
   label S_DRINKD  = "S # days/week drinks";
-  label S_DRINKN  = "S # drinks/day when drinks";
 
- /* --Variable S_DRINKR : # _200 */
+ /* --Variable S_DRINKN : # _200 */
+  label S_DRINKN  = "S # drinks/day when drinks";
   label S_DRINKR  = "S range of # drinks/day";
   label S_DRUGS  = "Reg take Rx prv 2 yrs (W2: prv 1-yr(A)*)";
   label S_DSIAMT  = "AMT RECEIVED LAST MONTH SSI";
@@ -256,9 +257,9 @@
   label S_DTIMTDTH  = "of Months from last Core interview to Death Date";
   label S_DW  = "Cognition Date naming-Day of week";
   label S_DY  = "Cognition Date naming-Day of month";
-  label S_DYEAR  = "death year";
 
- /* --Variable S1_EAT : # _210 */
+ /* --Variable S_DYEAR : # _210 */
+  label S_DYEAR  = "death year";
   label S1_EAT  = "S Diff-Eating";
   label S2_EAT  = "S Diff-Eating";
   label S_EAT  = "S Diff-Eating";
@@ -268,9 +269,9 @@
   label S_EATW  = "S Any Diff-Eating";
   label S_EDEGRM  = "Highest Degree-masked";
   label S_EDUC  = "education (categ)";
-  label S_EDYRS  = "Years of Education";
 
- /* --Variable S_EFFORT : # _220 */
+ /* --Variable S_EDYRS : # _220 */
+  label S_EDYRS  = "Years of Education";
   label S_EFFORT  = "CESD:Everything an effort";
   label S_EFFORX  = "CESD:Everything an effort-raw";
   label S_ENLIFE  = "CESD:Enjoyed life";
@@ -280,9 +281,9 @@
   label S_FAMR  = "Whether Family Resp";
   label S_FBWC20  = "IMPFLAG:BACKWARDS COUNT FROM 20";
   label S_FBWC86  = "IMPFLAG:BACKWARDS COUNT FROM 86";
-  label S_FCACT  = "IMPFLAG:CACTUS";
 
- /* --Variable S_FDLRC : # _230 */
+ /* --Variable S_FCACT : # _230 */
+  label S_FCACT  = "IMPFLAG:CACTUS";
   label S_FDLRC  = "IMPFLAG:DELAYED WORD RECALL";
   label S_FDW  = "IMPFLAG:DATE:DAY OF WEEK";
   label S_FDY  = "IMPFLAG:DATE:DAY";
@@ -292,9 +293,9 @@
   label S_FINPLN  = "S Financial planning horizon";
   label S_FINR  = "Whether Financial Resp";
   label S_FLAG  = "AHEAD OR 94/96 HRS";
-  label S_FLONE  = "CESD:Felt lonely";
 
- /* --Variable S_FLONEX : # _240 */
+ /* --Variable S_FLONE : # _240 */
+  label S_FLONE  = "CESD:Felt lonely";
   label S_FLONEX  = "CESD:Felt lonely-raw";
   label S_FLUSHT  = "Prev Flu Shot";
   label S_FMO  = "IMPFLAG:DATE:MONTH";
@@ -304,9 +305,9 @@
   label S_FSADX  = "CESD:Felt sad-raw";
   label S_FSCIS  = "IMPFLAG:SCISSORS";
   label S_FSER7  = "IMPFLAG:SERIAL 7s";
-  label S_FSIZE  = "Size of firm or business";
 
- /* --Variable S_FSIZEF : # _250 */
+ /* --Variable S_FSIZE : # _250 */
+  label S_FSIZE  = "Size of firm or business";
   label S_FSIZEF  = "Value carried forward from previous wave";
   label S_FSLFME  = "IMPFLAG:SELF RATED MEMORY";
   label S_FVOCAB  = "IMPFLAG:VOCAB SUM SCORE";
@@ -316,9 +317,9 @@
   label S_GOING  = "CESD:Could not get going";
   label S_GOINGX  = "CESD:Could not get going -raw";
   label S_GOVMD  = "S has Gov plan-Medicaid";
-  label S_GOVMR  = "S has Gov plan-Medicare";
 
- /* --Variable S_GOVOT : # _260 */
+ /* --Variable S_GOVMR : # _260 */
+  label S_GOVMR  = "S has Gov plan-Medicare";
   label S_GOVOT  = "S has Gov plan-Other";
   label S_GOVVA  = "S has Gov plan-Champus/VA";
   label S_GROSSA  = "Walk1/R,Clim1,Bed,Bath/0-5";
@@ -328,9 +329,9 @@
   label S_GRPPOS  = "S pos during grip strength tests";
   label S_GRPR  = "S hand grip strength-Right hand";
   label S_HALUC  = "S hallucinates";
-  label S_HDLR20  = "DELAYED WORD RECALL-HRS94";
 
- /* --Variable S_HEART : # _270 */
+ /* --Variable S_HDLR20 : # _270 */
+  label S_HDLR20  = "DELAYED WORD RECALL-HRS94";
   label S_HEART  = "S reports heart prob this wv";
   label S_HEARTE  = "S ever had heart problems";
   label S_HEARTEF  = "1st wv special missing heart problems";
@@ -340,9 +341,9 @@
   label S_HECOV1  = "Who is covered in Sp empl plan #1";
   label S_HECOV2  = "Who is covered in Sp empl plan #2";
   label S_HECOV3  = "Who is covered in Sp empl plan #3";
-  label S_HEIGHT  = "Self-reported height in meters";
 
- /* --Variable S_HENUM : # _280 */
+ /* --Variable S_HEIGHT : # _280 */
+  label S_HEIGHT  = "Self-reported height in meters";
   label S_HENUM  = "Number of health insurance plans";
   label S_HERET  = "S covered in retirement /summary";
   label S_HERTR1  = "R coverage by Sp in retirement #1";
@@ -352,9 +353,9 @@
   label S_HERTS2  = "Sp coverage by Sp in retirement #2";
   label S_HERTS3  = "Sp coverage by Sp in retirement #3";
   label S_HESRC1  = "Source of Sp empl plan #1";
-  label S_HESRC2  = "Source of Sp empl plan #2";
 
- /* --Variable S_HESRC3 : # _290 */
+ /* --Variable S_HESRC2 : # _290 */
+  label S_HESRC2  = "Source of Sp empl plan #2";
   label S_HESRC3  = "Source of Sp empl plan #3";
   label S_HHIDPN  = "Spouse HHIDPN";
   label S_HIBP  = "S reports high BP this wv";
@@ -364,9 +365,9 @@
   label S_HIBPQ  = "Q-wording high BP this wv";
   label S_HIBPS  = "S had hi BP since last IW";
   label S_HIGOV  = "S is covered by Gov plan";
-  label S_HILTC  = "S has Long Term Care Ins";
 
- /* --Variable S_HIMR20 : # _300 */
+ /* --Variable S_HILTC : # _300 */
+  label S_HILTC  = "S has Long Term Care Ins";
   label S_HIMR20  = "IMMEDIATE WORD RECALL-HRS94";
   label S_HIOTHP  = "S has Other Ins";
   label S_HISPAN  = "Hispanic";
@@ -376,9 +377,9 @@
   label S_HLPDYST  = "Total days got help last month";
   label S_HLPDYSU  = "Days unpaid helpers helped last month";
   label S_HLPHRSF  = "Hours family helpers helped last month";
-  label S_HLPHRSNF  = "Hours non-family helpers helped last month";
 
- /* --Variable S_HLPHRSP : # _310 */
+ /* --Variable S_HLPHRSNF : # _310 */
+  label S_HLPHRSNF  = "Hours non-family helpers helped last month";
   label S_HLPHRSP  = "Hours paid helpers helped last month";
   label S_HLPHRST  = "Total hours got help last month";
   label S_HLPHRSU  = "Hours unpaid helpers helped last month";
@@ -388,9 +389,9 @@
   label S_HLPPDNFN  = "Number of non-family helpers paid to help";
   label S_HLPPDTA  = "Total amount helpers were paid last month";
   label S_HLPPDTN  = "Total number of helpers paid to help";
-  label S_HLPRFN  = "Number of family helpers who helped last month";
 
- /* --Variable S_HLPRNFN : # _320 */
+ /* --Variable S_HLPRFN : # _320 */
+  label S_HLPRFN  = "Number of family helpers who helped last month";
   label S_HLPRNFN  = "Number of non-family helpers who helped last month";
   label S_HLPRPN  = "Number of paid helpers who helped last month";
   label S_HLPRTN  = "Total number of helpers who helped last month";
@@ -400,9 +401,9 @@
   label S_HLTC5F  = "Flag self-report of hlth chg, 5-cat";
   label S_HLTHLM  = "Hlth problems limit work";
   label S_HOMCAR  = "Home hlth care prv 2 yrs (W1: prv 12 mos*)";
-  label S_HOSP  = "Hospital stay prv 2 yrs (W1: prv 12 mos*)";
 
- /* --Variable S_HRSAMP : # _330 */
+ /* --Variable S_HOSP : # _330 */
+  label S_HOSP  = "Hospital stay prv 2 yrs (W1: prv 12 mos*)";
   label S_HRSAMP  = "Sample-Age Elig/Hrs92 Resp";
   label S_HSPNIT  = "# Nights in hosp prv 2 yrs (W1: prv 12 mos*)";
   label S_HSPTIM  = "# Hospital stays prv 2 yrs (W1: prv 12 mos*)";
@@ -412,9 +413,9 @@
   label S_IADL5H  = "S Gets Help-sum of IADLs /0-5";
   label S_IANN  = "Income:Sp Annuity";
   label S_IEARN  = "Income:Sp Earnings";
-  label S_IFANN  = "ImpFlag:Sp Annuity";
 
- /* --Variable S_IFEARN : # _340 */
+ /* --Variable S_IFANN : # _340 */
+  label S_IFANN  = "ImpFlag:Sp Annuity";
   label S_IFEARN  = "ImpFlag:Sp Earnings";
   label S_IFGXFR  = "ImpFlag:Sp Other Gov Transfer";
   label S_IFIRAW  = "ImpFlag:IRA Withd-Total (prev 2 yrs/since last int)";
@@ -424,9 +425,9 @@
   label S_IFSDI  = "ImpFlag-SocSec DI";
   label S_IFSRET  = "ImpFlag:Sp SocSec Retirement";
   label S1_IFSSDI  = "ImpFlag:Sp SSI + SS Disability";
-  label S_IFSSDI  = "ImpFlag:Sp SSI + SS Disablty";
 
- /* --Variable S_IFSSI : # _350 */
+ /* --Variable S_IFSSDI : # _350 */
+  label S_IFSSDI  = "ImpFlag:Sp SSI + SS Disablty";
   label S_IFSSI  = "ImpFlag-SSI Inc";
   label S_IFUNEM  = "ImpFlag-Unemployment";
   label S1_IFUNWC  = "ImpFlag:Sp Unemp + Workers Comp";
@@ -436,9 +437,9 @@
   label S_IIRAW  = "Income:IRA Withd-Total (prev 2 yrs/since last int)";
   label S_IIRAWY1  = "Income:IRA Withd-Total (LCY)";
   label S_IMRC  = "IMMEDIATE WORD RECALL(W14: FTF/TEL*)";
-  label S_IMRC20  = "IMMEDIATE WORD RECALL";
 
- /* --Variable S_INHER : # _360 */
+ /* --Variable S_IMRC20 : # _360 */
+  label S_IMRC20  = "IMMEDIATE WORD RECALL";
   label S_INHER  = "S Prob inheritance nxt 10 yr";
   label S_INHPE  = "Any employee of institution ever helped";
   label S_INHPFN  = "Number of family helpers ever helped";
@@ -448,9 +449,9 @@
   label S_INHPUN  = "Number of unpaid helpers ever helped";
   label S_INLBRF  = "=1 if S is in the labor force";
   label S_IPEN  = "Income:Sp Pension";
-  label S_IPENA  = "Income:Sp Pension + Annuity";
 
- /* --Variable S_ISDI : # _370 */
+ /* --Variable S_IPENA : # _370 */
+  label S_IPENA  = "Income:Sp Pension + Annuity";
   label S_ISDI  = "IncPart-SocSec DI";
   label S_ISRET  = "Income:Sp SocSec Retirement";
   label S_ISSDI  = "Income:Sp SSI + SS Disability";
@@ -460,9 +461,9 @@
   label S_IWBEG  = "Interview Begin Date";
   label S_IWBEGF  = "Interview Beg Date Flag";
   label S_IWCMP  = "IncPart-Workers Comp";
-  label S_IWEND  = "Interview End Date";
 
- /* --Variable S_IWENDF : # _380 */
+ /* --Variable S_IWEND : # _380 */
+  label S_IWEND  = "Interview End Date";
   label S_IWENDF  = "Interview End Date Flag";
   label S_IWENDM  = "Interview End Month";
   label S_IWENDY  = "Interview End Year";
@@ -472,9 +473,9 @@
   label S_JCIND  = "Current Job Industry/1980 Census";
   label S_JCINDB  = "Cur Job Industry/2002 Census";
   label S_JCINDC  = "Cur Job Industry/2007 Census";
-  label S_JCOCC  = "Current Job Occup/1980 Census";
 
- /* --Variable S_JCOCCA : # _390 */
+ /* --Variable S_JCOCC : # _390 */
+  label S_JCOCC  = "Current Job Occup/1980 Census";
   label S_JCOCCA  = "Cur Job Occup/Ahead coding";
   label S_JCOCCB  = "Cur Job Occup/2000 Census";
   label S_JCOCCC  = "Cur Job Occup/2010 Census";
@@ -484,9 +485,9 @@
   label S_JHOUR2  = "Hours worked/week 2nd job";
   label S_JHOURS  = "Hours worked/week main job";
   label S_JJOBS  = "Status of S Job History";
-  label S_JLASTM  = "Month Last Worked/not workng";
 
- /* --Variable S_JLASTY : # _400 */
+ /* --Variable S_JLASTM : # _400 */
+  label S_JLASTM  = "Month Last Worked/not workng";
   label S_JLASTY  = "Year Last Worked/not working";
   label S_JLIFT  = "Cur job req lift heavy loads";
   label S_JLIND  = "Longest Job Industry/1980 Census";
@@ -496,9 +497,9 @@
   label S_JLOCC  = "Longest Job Occ/1980 Census";
   label S_JLOCCA  = "Long Job Occup/Ahead coding";
   label S_JLOCCB  = "Long Job Occup/2000 Census";
-  label S_JLOCCC  = "Long Job Occup/2010 Census";
 
- /* --Variable S_JLTEN : # _410 */
+ /* --Variable S_JLOCCC : # _410 */
+  label S_JLOCCC  = "Long Job Occup/2010 Census";
   label S_JLTEN  = "Longest Job Tenure";
   label S_JLTENF  = "Long Job Tenure/fill in flag";
   label S_JMISS  = "# Jobs with missing dates";
@@ -508,9 +509,9 @@
   label S2_JOG  = "S Diff-Jog one mile";
   label S_JOG  = "S Diff-Jog one mile";
   label S_JOGA  = "S Any Diff-Jog one mile";
-  label S_JOGW  = "S Any Diff-Jog one mile";
 
- /* --Variable S_JPHYS : # _420 */
+ /* --Variable S_JOGW : # _420 */
+  label S_JOGW  = "S Any Diff-Jog one mile";
   label S_JPHYS  = "Cur job req lots phys effort";
   label S_JSIGHT  = "Cur job req good eyesight";
   label S_JSTOOP  = "Cur job req stoop/kneel/crouch";
@@ -520,9 +521,9 @@
   label S_JYEARM  = "S Years Worked/missing flag";
   label S_JYEARS  = "S Years Worked/self-rpt+jobh";
   label S_LBAGR  = "Big 5 Agreeableness";
-  label S_LBASSISTPRB  = "Reg help ailing friend/fam";
 
- /* --Variable S_LBCOMP : # _430 */
+ /* --Variable S_LBASSISTPRB : # _430 */
+  label S_LBASSISTPRB  = "Reg help ailing friend/fam";
   label S_LBCOMP  = "Completed LB Psychosocial Survey";
   label S_LBCON10  = "Big 5 Conscientiousness 10 Sub-items";
   label S_LBCON5  = "Big 5 Conscientiousness 5 Sub-items";
@@ -532,9 +533,9 @@
   label S_LBFAMHLTHPRB  = "Ongoing phy/emot problems in sp/chld";
   label S_LBFINPRB  = "Ongoing financial strain";
   label S_LBHLTHPRB  = "Self ongoing health problems";
-  label S_LBHOUSEPRB  = "Ongoing housing preoblems";
 
- /* --Variable S_LBLONELY11 : # _440 */
+ /* --Variable S_LBHOUSEPRB : # _440 */
+  label S_LBHOUSEPRB  = "Ongoing housing preoblems";
   label S_LBLONELY11  = "Loneliness 11-item scale";
   label S_LBLONELY3  = "Loneliness 3-item scale";
   label S_LBNEGAFFECT  = "Negative affect 12-question scale";
@@ -544,9 +545,9 @@
   label S_LBOPEN  = "Big 5 Openness to experience";
   label S_LBPOSAFFECT  = "Positive affect 13-question scale";
   label S_LBPOSAFFECT6  = "Positive affect 6-question scales";
-  label S_LBRF  = "S Labor Force Status";
 
- /* --Variable S_LBRFH : # _450 */
+ /* --Variable S_LBRF : # _450 */
+  label S_LBRF  = "S Labor Force Status";
   label S_LBRFH  = "Labor Force Status, No Week Restriction";
   label S_LBRFY  = "Labor Force Status Year Round Flag";
   label S_LBRLTNSHPRB  = "Ongoing problems close relationship";
@@ -556,9 +557,9 @@
   label S_LBSATHLTH  = "Sat w/Health";
   label S_LBSATHOME  = "Sat w/Condition of home";
   label S_LBSATINC  = "Sat w/Total household income";
-  label S_LBSATLEISURE  = "Sat w/Daily leisure acts";
 
- /* --Variable S_LBSATLIFE : # _460 */
+ /* --Variable S_LBSATLEISURE : # _460 */
+  label S_LBSATLEISURE  = "Sat w/Daily leisure acts";
   label S_LBSATLIFE  = "Sat w/Life as a whole LB";
   label S_LBSATWLF  = "Life satisfaction scale";
   label S_LBWGTR  = "S weight for LB Psychosocial Survey";
@@ -568,9 +569,9 @@
   label S_LHTACT  = "S Wtr light phys activ 3+/wk";
   label S_LIFEIN  = "S has Life Insurance";
   label S1_LIFT  = "S Diff-Lift/carry 10lbs";
-  label S2_LIFT  = "S Diff-Lift/carry 10lbs";
 
- /* --Variable S_LIFT : # _470 */
+ /* --Variable S2_LIFT : # _470 */
+  label S2_LIFT  = "S Diff-Lift/carry 10lbs";
   label S_LIFT  = "S Diff-Lift/carry 10lbs";
   label S_LIFTA  = "S Any Diff-Lift/carry 10lbs";
   label S_LIFTW  = "S Any Diff-Lift/carry 10lbs";
@@ -580,9 +581,9 @@
   label S_LIV10R  = "Rprob live 80-100 / LfTab prob";
   label S_LIV75  = "S Probability to live 75+";
   label S_LIV75C  = "Chg live 75+:R/LfTab ratio";
-  label S_LIV75F  = "Flag LIV75C, # prv iw";
 
- /* --Variable S_LIV75P : # _480 */
+ /* --Variable S_LIV75F : # _480 */
+  label S_LIV75F  = "Flag LIV75C, # prv iw";
   label S_LIV75P  = "LfTab prob live 75+/R curage";
   label S_LIV75R  = "Rprob live 75+ / LfTab prob";
   label S_LIV85  = "S Probability to live 85+";
@@ -592,9 +593,9 @@
   label S_LIV85R  = "Rprob live 85+ / LfTab prob";
   label S_LIV8XC  = "Chg live 80-100:R/LfTab ratio";
   label S_LIV8XF  = "Flag LIV8XC, # prv iw";
-  label S_LIVBRO  = "Number of living brothers";
 
- /* --Variable S_LIVPAR : # _490 */
+ /* --Variable S_LIVBRO : # _490 */
+  label S_LIVBRO  = "Number of living brothers";
   label S_LIVPAR  = "Number of living parents";
   label S_LIVSIB  = "Number of living siblings";
   label S_LIVSIS  = "Number of living sisters";
@@ -604,9 +605,9 @@
   label S_LTACTP  = "S Period light phys activ";
   label S_LTACTX  = "S Freq light phys activ {finer scale}";
   label S_LTCPRM  = "Long Term Care Insurance Plan Monthly Premium";
-  label S_LUNG  = "S reports lung disease this wv";
 
- /* --Variable S_LUNGE : # _500 */
+ /* --Variable S_LUNG : # _500 */
+  label S_LUNG  = "S reports lung disease this wv";
   label S_LUNGE  = "S ever had lung disease";
   label S_LUNGEF  = "1st wv special missing lung disease";
   label S_LUNGF  = "Flag dispute chg lung disease";
@@ -616,9 +617,9 @@
   label S1_MAP  = "S Diff-Use a map";
   label S2_MAP  = "S Diff-Use a map";
   label S_MAP  = "S Diff-Use a map";
-  label S_MAPA  = "S Any Diff-Use a map";
 
- /* --Variable S_MAPW : # _510 */
+ /* --Variable S_MAPA : # _510 */
+  label S_MAPA  = "S Any Diff-Use a map";
   label S_MAPW  = "S Any Diff-Use a map";
   label S_MCURLN  = "S length of current marriage";
   label S_MCWV  = "S Diff-Use a microwave";
@@ -628,9 +629,9 @@
   label S_MEALS  = "S Diff-Preparing hot meals";
   label S_MEALSA  = "S Any Diff-Prepare hot meal";
   label S_MEALSH  = "S Gets Help-Preparing hot meals";
-  label S_MEALSR  = "S Diff-Preparing hot meals";
 
- /* --Variable S2_MEDS : # _520 */
+ /* --Variable S_MEALSR : # _520 */
+  label S_MEALSR  = "S Diff-Preparing hot meals";
   label S2_MEDS  = "S Diff-Take medications";
   label S_MEDS  = "S Diff-Take medications";
   label S_MEDSA  = "S Any Diff-Take medications";
@@ -640,9 +641,9 @@
   label S_MEMRY  = "S reports memory prob this wv";
   label S_MEMRYE  = "S ever had memory problem";
   label S_MEMRYEF  = "1st wv special missing memory problem";
-  label S_MEMRYF  = "Flag chg prev memory prob";
 
- /* --Variable S_MEMRYQ : # _530 */
+ /* --Variable S_MEMRYF : # _530 */
+  label S_MEMRYF  = "Flag chg prev memory prob";
   label S_MEMRYQ  = "Q-wording memory prob this wv";
   label S_MEMRYS  = "S had memory prob snce last IW";
   label S_MEND  = "S # times unknown end marriage";
@@ -652,9 +653,9 @@
   label S_MO  = "Cognition Date naming-Month";
   label S_MOBILA  = "Any Diff-sum of Mobility measures /0-5";
   label S_MOBILW  = "Any Diff-sum of Mobility measures /0-5";
-  label S_MOMAGE  = "Mother age current/at death";
 
- /* --Variable S_MOMLIV : # _540 */
+ /* --Variable S_MOMAGE : # _540 */
+  label S_MOMAGE  = "Mother age current/at death";
   label S_MOMLIV  = "Mother alive";
   label S2_MONEY  = "S Diff-Managing money";
   label S_MONEY  = "S Diff-Managing money";
@@ -664,9 +665,9 @@
   label S_MPART  = "S partnered";
   label S_MRCT  = "S # marriages";
   label S_MRPREM  = "Medicare/Medicaid HMO Monthly Premium";
-  label S_MSTAT  = "S Marital Status";
 
- /* --Variable S_MSTATF : # _550 */
+ /* --Variable S_MSTAT : # _550 */
+  label S_MSTAT  = "S Marital Status";
   label S_MSTATF  = "S MStatH-Flag diff w/marhist";
   label S_MSTATH  = "S MarStat-w/o part,filled";
   label S_MSTOT  = "TOTAL MENTAL STATUS SUMMARY SCORE(W14: FTF/TEL*)";
@@ -676,9 +677,9 @@
   label S_NHMMVM  = "Month moved to Nurs home";
   label S_NHMMVY  = "Year moved to Nurs home";
   label S_NOTICS  = "NOT ASKED TICS ITEMS";
-  label S_NOVOC  = "NOT ASKED VOCABULARY";
 
- /* --Variable S_NRSHOM : # _560 */
+ /* --Variable S_NOVOC : # _560 */
+  label S_NOVOC  = "NOT ASKED VOCABULARY";
   label S_NRSHOM  = "Nurs home stay prv 2 yrs (W1: prv 12 mos*)";
   label S_NRSNIT  = "# Nights in nurs home prv 2 yrs (W1: prv 12 mos*)";
   label S_NRSTIM  = "# Nurs home stays prv 2 yrs (W1: prv 12 mos*)";
@@ -688,9 +689,9 @@
   label S_OHRSID  = "case-HRS core HHIDPN/Num";
   label S_OOPMD  = "Mexp Amt:Out of pkt med exp prv 2 yrs (W2: prv 12 mos*)";
   label S_OOPMDF  = "Mexp Flag:Out of pkt imputed";
-  label S_OOPMDO  = "Mexp Amt:Out of pkt med exp w oth, prv 2 yrs";
 
- /* --Variable S_OOPMDOF : # _570 */
+ /* --Variable S_OOPMDO : # _570 */
+  label S_OOPMDO  = "Mexp Amt:Out of pkt med exp w oth, prv 2 yrs";
   label S_OOPMDOF  = "Mexp Flag:Out of pkt w oth imputed";
   label S_OUTPT  = "Outpatient surgry prv 2 yrs (W2:  prv 1-,2-yr(A,H)*)";
   label S_PAPSM  = "Prev Pap Smear";
@@ -700,9 +701,9 @@
   label S_PENIC2  = "Pen #2 Continue after death";
   label S_PENINC  = "S current receiving pension income";
   label S_PENI_N  = "# pensions S receives income";
-  label S2_PHONE  = "S Diff-Use telephone";
 
- /* --Variable S_PHONE : # _580 */
+ /* --Variable S2_PHONE : # _580 */
+  label S2_PHONE  = "S Diff-Use telephone";
   label S_PHONE  = "S Diff-Use telephone";
   label S_PHONEA  = "S Any Diff-Use telephone";
   label S_PHONEH  = "S Gets Help-Use telephone";
@@ -712,9 +713,9 @@
   label S_PMHGHTS  = "S phys msr height-Wore shoes";
   label S_PMWAIST  = "S phys msr waist";
   label S_PMWAISTC  = "S phys msr waist-Bulky clothes";
-  label S_PMWGHT  = "S phys msr weight in kilograms";
 
- /* --Variable S_PMWGHTF : # _590 */
+ /* --Variable S_PMWGHT : # _590 */
+  label S_PMWGHT  = "S phys msr weight in kilograms";
   label S_PMWGHTF  = "S phys msr weight-Floor type";
   label S_PMWGHTS  = "S phys msr weight-Wore shoes";
   label S_PNHM5Y  = "S Prob moving to NHM in 5 yrs";
@@ -724,9 +725,9 @@
   label S_PROST  = "Prev Prostate";
   label S_PROXY  = "Whether Proxy Interview";
   label S_PRPCNT  = "Number of Private Insurance Plans";
-  label S_PRPRM1  = "Private Insurance Plan 1 Monthly Premium";
 
- /* --Variable S_PRPRM2 : # _600 */
+ /* --Variable S_PRPRM1 : # _600 */
+  label S_PRPRM1  = "Private Insurance Plan 1 Monthly Premium";
   label S_PRPRM2  = "Private Insurance Plan 2 Monthly Premium";
   label S_PRPRM3  = "Private Insurance Plan 3 Monthly Premium";
   label S_PRSRC1  = "Private Insurance Plan 1 Source";
@@ -736,9 +737,9 @@
   label S_PSYCH  = "S reports psych prob this wv";
   label S_PSYCHE  = "S ever had psych problems";
   label S_PSYCHEF  = "1st wv special missing psych problems";
-  label S_PSYCHF  = "Flag dispute chg psych probs";
 
- /* --Variable S_PSYCHQ : # _610 */
+ /* --Variable S_PSYCHF : # _610 */
+  label S_PSYCHF  = "Flag dispute chg psych probs";
   label S_PSYCHQ  = "Q-wording psych prob this wv";
   label S_PSYCHS  = "S had psych prob snce lastIW";
   label S_PTYP1  = "Current pension type #1";
@@ -748,9 +749,9 @@
   label S_PTYPD1  = "Current pension type in detail #1";
   label S_PTYPD2  = "Current pension type in detail #2";
   label S_PTYPD3  = "Current pension type in detail #3";
-  label S_PTYPD4  = "Current pension type in detail #4";
 
- /* --Variable S_PTYPF1 : # _620 */
+ /* --Variable S_PTYPD4 : # _620 */
+  label S_PTYPD4  = "Current pension type in detail #4";
   label S_PTYPF1  = "Does pension type match detail? #1";
   label S_PTYPF2  = "Does pension type match detail? #2";
   label S_PTYPF3  = "Does pension type match detail? #3";
@@ -760,9 +761,9 @@
   label S1_PUSH  = "S Diff-Push/pull large obj";
   label S2_PUSH  = "S Diff-Push/pull large obj";
   label S_PUSH  = "S Diff-Push/pull large obj";
-  label S_PUSHA  = "S Any Diff-Push/pull lg obj";
 
- /* --Variable S_PUSHW : # _630 */
+ /* --Variable S_PUSHA : # _630 */
+  label S_PUSHA  = "S Any Diff-Push/pull lg obj";
   label S_PUSHW  = "S Any Diff-Push/pull lg obj";
   label S_RACEM  = "Race-masked";
   label S_RELIG  = "Religion";
@@ -772,9 +773,9 @@
   label S_RETLIV  = "S Expect-retiremt living std";
   label S_RETMON  = "Month Retired if say retired";
   label S_RETSAT  = "Ret Satisfying";
-  label S_RETWLT  = "S Expect-tot retirement wlth";
 
- /* --Variable S_RETWRK : # _640 */
+ /* --Variable S_RETWLT : # _640 */
+  label S_RETWLT  = "S Expect-tot retirement wlth";
   label S_RETWRK  = "S Plan-paid work aft retired";
   label S_RETWSP  = "S Expect-SP retire same time";
   label S_RETYR  = "Year Retired if say retired";
@@ -784,9 +785,9 @@
   label S_RPLNYR  = "When S plans to stop work";
   label S_RXPREM  = "Prescription Drug Insurance Monthly Premium";
   label S_RYRCMP  = "Ret Yrs Compared to Before";
-  label S_SADLF  = "S Skip ADLs Flag";
 
- /* --Variable S_SAMEJOB : # _650 */
+ /* --Variable S_SADLF : # _650 */
+  label S_SADLF  = "S Skip ADLs Flag";
   label S_SAMEJOB  = "Same Job title as last Wave";
   label S_SAMEMP  = "Same Employer as Last Wave";
   label S_SAYRET  = "S considers self retired";
@@ -796,9 +797,9 @@
   label S_SDIAPLY  = "Year appealed SSDI since last wave";
   label S_SDIAPP  = "Applied for SSDI since last wave";
   label S_SDIAPPM  = "Month applied for SSDI since last wave";
-  label S_SDIAPPY  = "Year applied for SSDI since last wave";
 
- /* --Variable S_SDIDEN : # _660 */
+ /* --Variable S_SDIAPPY : # _660 */
+  label S_SDIAPPY  = "Year applied for SSDI since last wave";
   label S_SDIDEN  = "Denied SSDI since last wave";
   label S_SDIREC  = "Started receiving SSDI since last wave";
   label S_SDIRECM  = "Month started receiving SSDI since last wave";
@@ -808,9 +809,9 @@
   label S_SDISTPY  = "Year stopped receiving SSDI since last wave";
   label S_SER7  = "SERIAL 7S";
   label S_SHLT  = "Self-report of health";
-  label S_SHLTC  = "Change in self-reported hlth";
 
- /* --Variable S_SHLTCF : # _670 */
+ /* --Variable S_SHLTC : # _670 */
+  label S_SHLTC  = "Change in self-reported hlth";
   label S_SHLTCF  = "Flag chg self-reported hlth";
   label S_SHOP  = "S Diff-Shop for groceries";
   label S_SHOPA  = "S Any Diff-Shop for grocery";
@@ -820,9 +821,9 @@
   label S2_SIT  = "S Diff-Sit for 2 hours";
   label S_SIT  = "S Diff-Sit for 2 hours";
   label S_SITA  = "S Any Diff-Sit for 2 hours";
-  label S_SITW  = "S Any Diff-Sit for 2 hours";
 
- /* --Variable S_SLEEP : # _680 */
+ /* --Variable S_SITW : # _680 */
+  label S_SITW  = "S Any Diff-Sit for 2 hours";
   label S_SLEEP  = "S reports sleep disorder this wv";
   label S_SLEEPE  = "S ever had sleep disorder";
   label S_SLEEPEF  = "1st wv special missing sleep disorder";
@@ -832,9 +833,9 @@
   label S_SLEEPX  = "CESD:Sleep was restless-raw";
   label S_SLFEMP  = "Whether Self-Employed";
   label S_SLFMEM  = "SELF RATED MEMORY";
-  label S_SMOKEN  = "S smokes now";
 
- /* --Variable S_SMOKEV : # _690 */
+ /* --Variable S_SMOKEN : # _690 */
+  label S_SMOKEN  = "S smokes now";
   label S_SMOKEV  = "S smoke ever";
   label S_SPCFAC  = "Spec hlth facilty prv 2 yrs (W2:  prv 1-,2-yr(A,H)*)";
   label S_SSAPL  = "Appealed SSDI/SSI decision since last wave";
@@ -844,9 +845,9 @@
   label S_SSAPPM  = "Month applied for SSDI/SSI since last wave";
   label S_SSAPPY  = "Year applied for SSDI/SSI since last wave";
   label S_SSDEN  = "Denied SSDI/SSI since last wave";
-  label S_SSDI  = "S IS RECEIVING SSDI";
 
- /* --Variable S_SSIAPL : # _700 */
+ /* --Variable S_SSDI : # _700 */
+  label S_SSDI  = "S IS RECEIVING SSDI";
   label S_SSIAPL  = "Appealed SSI decision since last wave";
   label S_SSIAPLM  = "Month appealed SSI since last wave";
   label S_SSIAPLY  = "Year appealed SSI since last wave";
@@ -856,9 +857,9 @@
   label S_SSIDEN  = "Denied SSI since last wave";
   label S_SSIREC  = "Started receiving SSI since last wave";
   label S_SSIRECM  = "Month started receiving SSI since last wave";
-  label S_SSIRECY  = "Year started receiving SSI since last wave";
 
- /* --Variable S_SSISTP : # _710 */
+ /* --Variable S_SSIRECY : # _710 */
+  label S_SSIRECY  = "Year started receiving SSI since last wave";
   label S_SSISTP  = "Stopped receiving SSI since last wave";
   label S_SSISTPM  = "Month stopped receiving SSI since last wave";
   label S_SSISTPY  = "Year stopped receiving SSI since last wave";
@@ -868,9 +869,9 @@
   label S_SSSTP  = "Stopped receiving SSDI/SSI since last wave";
   label S_SSSTPM  = "Month stopped receiving SSDI/SSI since last wave";
   label S_SSSTPY  = "Year stopped receiving SSDI/SSI since last wave";
-  label S_SSWRER  = "S SS wealth based on own earnings, claiming at 62";
 
- /* --Variable S_SSWRNR : # _720 */
+ /* --Variable S_SSWRER : # _720 */
+  label S_SSWRER  = "S SS wealth based on own earnings, claiming at 62";
   label S_SSWRNR  = "S SS wealth based on own earnings, claiming at NRA";
   label S_SSWRXA  = "S SS wealth based on own earnings, claiming at 70";
   label S_SSWSER  = "S SSW from spouse/survival benefits, claim at 62";
@@ -880,9 +881,9 @@
   label S1_STOOP  = "S Diff-Stoop/Kneel/Crouch";
   label S2_STOOP  = "S Diff-Stoop/Kneel/Crouch";
   label S_STOOP  = "S Diff-Stoop/Kneel/Crouch";
-  label S_STOOPA  = "S Any Diff-Stoop/Kneel/Crch";
 
- /* --Variable S_STOOPW : # _730 */
+ /* --Variable S_STOOPA : # _730 */
+  label S_STOOPA  = "S Any Diff-Stoop/Kneel/Crch";
   label S_STOOPW  = "S Any Diff-Stoop/Kneel/Crouch";
   label S_STROK  = "S reports stroke this wv";
   label S_STROKE  = "S ever had stroke";
@@ -892,9 +893,9 @@
   label S_STROKS  = "S had stroke since last IW";
   label S_TIMWLK  = "S timed walk test time";
   label S_TIMWLKA  = "S timed walk test-Walk aid used";
-  label S_TLIPRM  = "Term Life Insurance Monthly Premium";
 
- /* --Variable S2_TOILT : # _740 */
+ /* --Variable S_TLIPRM : # _740 */
+  label S_TLIPRM  = "Term Life Insurance Monthly Premium";
   label S2_TOILT  = "S Diff-Using the toilet";
   label S_TOILT  = "S Diff-Using the toilet";
   label S_TOILTA  = "S Any Diff-Using the toilet";
@@ -904,9 +905,9 @@
   label S_TOTMBI  = "Imputed Tot Med Exp Bkt";
   label S_TOTMD  = "Total med expenses, prv 2 yrs";
   label S_TOTMDF  = "Total med imputed";
-  label S_TR20  = "TOTAL WORD RECALL SUMMARY SCORE(W14: FTF/TEL*)";
 
- /* --Variable S_TR40 : # _750 */
+ /* --Variable S_TR20 : # _750 */
+  label S_TR20  = "TOTAL WORD RECALL SUMMARY SCORE(W14: FTF/TEL*)";
   label S_TR40  = "TOTAL WORD RECALL SUMMARY SCORE";
   label S_TYLTC  = "S Type of Long Term Care Ins";
   label S_ULCER  = "Rs had ulcers";
@@ -916,9 +917,9 @@
   label S_VETRN  = "Veteran Status";
   label S_VGACTF  = "S Freq vigorous phys activ";
   label S_VGACTN  = "S # times/per vigor phys act";
-  label S_VGACTP  = "S Period vigor phys activ";
 
- /* --Variable S_VGACTX : # _760 */
+ /* --Variable S_VGACTP : # _760 */
+  label S_VGACTP  = "S Period vigor phys activ";
   label S_VGACTX  = "S Freq vigorous phys activ {finer scale}";
   label S_VIGACT  = "S Wtr vigorus phys act 3+/wk";
   label S_VOCAB  = "VOCAB SUM SCORE";
@@ -928,9 +929,9 @@
   label S_WALK1  = "S Diff-Walk one block";
   label S_WALK1A  = "S Any Diff-Walk one block";
   label S_WALK1W  = "S Any Diff-Walk one block";
-  label S1_WALKR  = "S Diff-Walk across room";
 
- /* --Variable S2_WALKR : # _770 */
+ /* --Variable S1_WALKR : # _770 */
+  label S1_WALKR  = "S Diff-Walk across room";
   label S2_WALKR  = "S Diff-Walk across room";
   label S_WALKR  = "S Diff-Walk across room";
   label S_WALKRA  = "S Any Diff-Walk across room";
@@ -940,9 +941,9 @@
   label S_WALKRW  = "S Any Diff-Walk across room";
   label S1_WALKS  = "S Diff-Walk sev blocks";
   label S2_WALKS  = "S Diff-Walk sev blocks";
-  label S_WALKS  = "S Diff-Walk sev blocks";
 
- /* --Variable S_WALKSA : # _780 */
+ /* --Variable S_WALKS : # _780 */
+  label S_WALKS  = "S Diff-Walk sev blocks";
   label S_WALKSA  = "S Any Diff-Walk sev blocks";
   label S_WALKSW  = "S Any Diff-Walk sev blocks";
   label S_WANDER  = "S ever wander off";
@@ -952,9 +953,9 @@
   label S_WGIHR  = "Imputed Wage Rate-Hrly";
   label S_WGIWK  = "Imputed Wage Rate-Wkly";
   label S_WHAPPX  = "CESD:Was happy-raw";
-  label S_WHAPPY  = "CESD:Was happy";
 
- /* --Variable S_WLIPRM : # _790 */
+ /* --Variable S_WHAPPY : # _790 */
+  label S_WHAPPY  = "CESD:Was happy";
   label S_WLIPRM  = "Whole Life Insurance Monthly Premium";
   label S_WORK  = "S working for pay";
   label S_WORK2  = "Works at 2nd job";
@@ -964,9 +965,9 @@
   label S_WORK65F  = "Logical Skip Flag:P65";
   label S_WORK70  = "S Prob working FT after 70";
   label S_WORK70A  = "S Prob working at all after 70";
-  label S_WORK70AF  = "Logical Skip Flag:P70A";
 
- /* --Variable S_WORK70F : # _800 */
+ /* --Variable S_WORK70AF : # _800 */
+  label S_WORK70AF  = "Logical Skip Flag:P70A";
   label S_WORK70F  = "Logical Skip Flag:P70";
   label S_WORKLM  = "S Prob health limiting work";
   label S_WTCRNH  = "Combined Respondent weight and NursHm Resident weight";
@@ -981,11 +982,11 @@
 /* Macro invoked by `create_template_longout` macro */
   length HHID $6;                           /* _1 */
   length PN $3;                             /* _2 */
-  length H_HHIDC $7;                        /* _4 */
-  length SUBHH $1;                          /* _5 */
-  length RAHHIDPN $9;                       /* _6 */
-  length WAVE_NAME $12;                     /* _8 */
+  length RAHHIDPN $9;                       /* _4 */
+  length WAVE_NAME $12;                     /* _7 */
   length CYEAR $10;                         /* _9 */
+  length H_HHIDC $7;                        /* _11 */
+  length SUBHH $1;                          /* _12 */
 %mend clength_statements;
 
 
@@ -993,518 +994,518 @@
 %macro format_statements;
 /*  Table SLong: format statements for 512 variables */
 /* Macro invoked by `create_template_longout` macro */
-  format SASSRECV YESNO.;                   /* _16 */
-  format S_AHDSMP AHDSMP.;                  /* _30 */
-  format S_ALONE PRLOST.;                   /* _32 */
-  format S_ALZHE RAWCOND.;                  /* _33 */
-  format S_ALZHEE YESNO.;                   /* _34 */
-  format S_ALZHEF MEMRYF.;                  /* _36 */
-  format S_ALZHEQ CONDQ.;                   /* _37 */
-  format S_ALZHES YESNOP.;                  /* _38 */
-  format S_ANS3PQ YESNO.;                   /* _40 */
-  format S1_ARMS ADL_1C.;                   /* _41 */
-  format S2_ARMS ADL_2C.;                   /* _42 */
-  format S_ARMS ADLA.;                      /* _43 */
-  format S_ARMSA ADLA.;                     /* _44 */
-  format S_ARMSW ADLA.;                     /* _45 */
-  format S_ARTHR RAWCOND.;                  /* _46 */
-  format S_ARTHRE YESNO.;                   /* _47 */
-  format S_ARTHRF EVERF.;                   /* _49 */
-  format S_ARTHRQ CONDQ.;                   /* _50 */
-  format S_ARTHRS YESNOP.;                  /* _51 */
-  format S_BACK PREVENT.;                   /* _53 */
-  format S_BALFULC PHYSMEASBIN.;            /* _55 */
-  format S_BALFULT PHYSMEASBIN.;            /* _56 */
-  format S_BALSBSC PHYSMEASBIN.;            /* _58 */
-  format S_BALSEMIC PHYSMEASBIN.;           /* _60 */
-  format S1_BATH ADL_1C.;                   /* _61 */
-  format S2_BATH ADL_2C.;                   /* _62 */
-  format S_BATH ADLA.;                      /* _63 */
-  format S_BATHA ADLA.;                     /* _64 */
-  format S2_BATHH ADL_2H.;                  /* _65 */
-  format S_BATHH ADL_7H.;                   /* _66 */
-  format S_BATHW ADLA.;                     /* _67 */
-  format S1_BED ADL_1C.;                    /* _69 */
-  format S2_BED ADL_2C.;                    /* _70 */
-  format S_BED ADLA.;                       /* _71 */
-  format S_BEDA ADLA.;                      /* _72 */
-  format S_BEDE EQVPMT.;                    /* _73 */
-  format S2_BEDH ADL_2H.;                   /* _74 */
-  format S_BEDH ADL_7H.;                    /* _75 */
-  format S_BEDW ADLA.;                      /* _76 */
-  format S_BEQLRG BEQLRG.;                  /* _81 */
-  format S_BFLAG RABFLAG.;                  /* _82 */
-  format S_BPLACE CENDIV.;                  /* _86 */
-  format S_BPLACF BPLACF.;                  /* _87 */
-  format S_BPPOS POSITION.;                 /* _88 */
-  format S_BREAST PREVENT.;                 /* _91 */
-  format S_BWC20 COGCNT.;                   /* _92 */
-  format S_BWC86 COGCNT.;                   /* _93 */
-  format S_CACT COGCORR.;                   /* _95 */
-  format S1_CALC ADL_1C.;                   /* _96 */
-  format S2_CALC ADL_2C.;                   /* _97 */
-  format S_CALCA ADLA.;                     /* _98 */
-  format S_CALCW ADLA.;                     /* _99 */
-  format S_CANCR RAWCOND.;                  /* _100 */
-  format S_CANCRE YESNO.;                   /* _101 */
-  format S_CANCRF EVERF.;                   /* _103 */
-  format S_CANCRQ CONDQ.;                   /* _104 */
-  format S_CANCRS YESNOP.;                  /* _105 */
-  format S_CENDIV CENDIV.;                  /* _106 */
-  format S_CENREG CENREG.;                  /* _107 */
-  format S1_CHAIR ADL_1C.;                  /* _110 */
-  format S2_CHAIR ADL_2C.;                  /* _111 */
-  format S_CHAIR ADLA.;                     /* _112 */
-  format S_CHAIRA ADLA.;                    /* _113 */
-  format S_CHAIRW ADLA.;                    /* _114 */
-  format S_CHOLST PREVENT.;                 /* _115 */
-  format S_CLAIMED YESNO.;                  /* _116 */
-  format S1_CLIM1 ADL_1C.;                  /* _117 */
-  format S2_CLIM1 ADL_2C.;                  /* _118 */
-  format S_CLIM1 ADLA.;                     /* _119 */
-  format S_CLIM1A ADLA.;                    /* _120 */
-  format S_CLIM1W ADLA.;                    /* _121 */
-  format S1_CLIMS ADL_1C.;                  /* _122 */
-  format S2_CLIMS ADL_2C.;                  /* _123 */
-  format S_CLIMS ADLA.;                     /* _124 */
-  format S_CLIMSA ADLA.;                    /* _125 */
-  format S_CLIMSW ADLA.;                    /* _126 */
-  format S_COHBYR COHBYR.;                  /* _128 */
-  format S_COMP ADL_1C.;                    /* _130 */
-  format S_COMPW ADLA.;                     /* _131 */
-  format S_CONDSP PRVIWF.;                  /* _136 */
-  format S_COVR HINS.;                      /* _137 */
-  format S_COVRT HINS.;                     /* _138 */
-  format S_COVS HINS.;                      /* _139 */
-  format S_DADLIV YNFAM.;                   /* _141 */
-  format S_DCMODE1 DCF.;                    /* _156 */
-  format S_DCMODE2 DCF.;                    /* _157 */
-  format S_DCMODE3 DCF.;                    /* _158 */
-  format S_DCMODE4 DCF.;                    /* _159 */
-  format S_DEMEN RAWCOND.;                  /* _165 */
-  format S_DEMENE YESNO.;                   /* _166 */
-  format S_DEMENF MEMRYF.;                  /* _168 */
-  format S_DEMENQ CONDQ.;                   /* _169 */
-  format S_DEMENS YESNOP.;                  /* _170 */
-  format S_DENTST YESNO.;                   /* _171 */
-  format S_DEPRES YESNO.;                   /* _172 */
-  format S_DEPREX R1CESD.;                  /* _173 */
-  format S_DIAB RAWCOND.;                   /* _174 */
-  format S_DIABE YESNO.;                    /* _175 */
-  format S_DIABF EVERF.;                    /* _177 */
-  format S_DIABQ CONDQ.;                    /* _178 */
-  format S_DIABS YESNOP.;                   /* _179 */
-  format S1_DIME ADL_1C.;                   /* _180 */
-  format S2_DIME ADL_2C.;                   /* _181 */
-  format S_DIME ADLA.;                      /* _182 */
-  format S_DIMEA ADLA.;                     /* _183 */
-  format S_DIMEW ADLA.;                     /* _184 */
-  format S_DOCTOR YESNO.;                   /* _189 */
-  format S1_DRESS ADL_1C.;                  /* _190 */
-  format S2_DRESS ADL_2C.;                  /* _191 */
-  format S_DRESS ADLA.;                     /* _192 */
-  format S_DRESSA ADLA.;                    /* _193 */
-  format S2_DRESSH ADL_2H.;                 /* _194 */
-  format S_DRESSH ADL_7H.;                  /* _195 */
-  format S_DRESSW ADLA.;                    /* _196 */
-  format S_DRINK YESNO.;                    /* _197 */
-  format S_DRINKD DRINKX.;                  /* _198 */
-  format S_DRINKN DRINKX.;                  /* _199 */
-  format S_DRINKR DRINKR.;                  /* _200 */
-  format S_DRUGS YESNO.;                    /* _201 */
-  format S_DSRC DDSRC.;                     /* _203 */
-  format S_DSTAT RFDSTAT.;                  /* _205 */
-  format S_DW COGCORR.;                     /* _207 */
-  format S_DY COGCORR.;                     /* _208 */
-  format S1_EAT ADL_1C.;                    /* _210 */
-  format S2_EAT ADL_2C.;                    /* _211 */
-  format S_EAT ADLA.;                       /* _212 */
-  format S_EATA ADLA.;                      /* _213 */
-  format S2_EATH ADL_2H.;                   /* _214 */
-  format S_EATH ADL_7H.;                    /* _215 */
-  format S_EATW ADLA.;                      /* _216 */
-  format S_EDEGRM EDEGRM.;                  /* _217 */
-  format S_EDUC EDUC.;                      /* _218 */
-  format S_EDYRS EDYRS.;                    /* _219 */
-  format S_EFFORT YESNO.;                   /* _220 */
-  format S_EFFORX R1CESD.;                  /* _221 */
-  format S_ENLIFE YESNO.;                   /* _222 */
-  format S_ENLIFX R1CESD.;                  /* _223 */
-  format S_EVBRNF EVRBORNF.;                /* _225 */
-  format S_FAMR YESNO.;                     /* _226 */
-  format S_FBWC20 COGIMP.;                  /* _227 */
-  format S_FBWC86 COGIMP.;                  /* _228 */
-  format S_FCACT COGIMP.;                   /* _229 */
-  format S_FDLRC COGIMP.;                   /* _230 */
-  format S_FDW COGIMP.;                     /* _231 */
-  format S_FDY COGIMP.;                     /* _232 */
-  format S_FEDUC MFEDYRS.;                  /* _233 */
-  format S_FIMRC COGIMP.;                   /* _234 */
-  format S_FINPLN FINPLN.;                  /* _236 */
-  format S_FINR YESNO.;                     /* _237 */
-  format S_FLAG WFLAG.;                     /* _238 */
-  format S_FLONE YESNO.;                    /* _239 */
-  format S_FLONEX R1CESD.;                  /* _240 */
-  format S_FLUSHT PREVENT.;                 /* _241 */
-  format S_FMO COGIMP.;                     /* _242 */
-  format S_FPRES COGIMP.;                   /* _243 */
-  format S_FPSTME COGIMP.;                  /* _244 */
-  format S_FSAD YESNO.;                     /* _245 */
-  format S_FSADX R1CESD.;                   /* _246 */
-  format S_FSCIS COGIMP.;                   /* _247 */
-  format S_FSER7 COGIMP.;                   /* _248 */
-  format S_FSIZEF FORWARD.;                 /* _250 */
-  format S_FSLFME COGIMP.;                  /* _251 */
-  format S_FVOCAB COGIMP.;                  /* _252 */
-  format S_FVP COGIMP.;                     /* _253 */
-  format S_FYR COGIMP.;                     /* _254 */
-  format S_GENDER GENDER.;                  /* _255 */
-  format S_GOING YESNO.;                    /* _256 */
-  format S_GOINGX R1CESD.;                  /* _257 */
-  format S_GOVMD YESNO.;                    /* _258 */
-  format S_GOVMR YESNO.;                    /* _259 */
-  format S_GOVOT YESNO.;                    /* _260 */
-  format S_GOVVA YESNO.;                    /* _261 */
-  format S_GRPDOM GRPDOM.;                  /* _264 */
-  format S_GRPPOS POSITION.;                /* _266 */
-  format S_HALUC PRLOST.;                   /* _268 */
-  format S_HEART RAWCOND.;                  /* _270 */
-  format S_HEARTE YESNO.;                   /* _271 */
-  format S_HEARTF EVERF.;                   /* _273 */
-  format S_HEARTQ CONDQ.;                   /* _274 */
-  format S_HEARTS YESNOP.;                  /* _275 */
-  format S_HECOV1 RHCOV.;                   /* _276 */
-  format S_HECOV2 RHCOV.;                   /* _277 */
-  format S_HECOV3 RHCOV.;                   /* _278 */
-  format S_HERET COVRT.;                    /* _281 */
-  format S_HERTR1 COVRT.;                   /* _282 */
-  format S_HERTR2 COVRT.;                   /* _283 */
-  format S_HERTR3 COVRT.;                   /* _284 */
-  format S_HERTS1 COVRT.;                   /* _285 */
-  format S_HERTS2 COVRT.;                   /* _286 */
-  format S_HERTS3 COVRT.;                   /* _287 */
-  format S_HESRC1 RHSRC.;                   /* _288 */
-  format S_HESRC2 RHSRC.;                   /* _289 */
-  format S_HESRC3 RHSRC.;                   /* _290 */
-  format S_HIBP RAWCOND.;                   /* _292 */
-  format S_HIBPE YESNO.;                    /* _293 */
-  format S_HIBPF EVERF.;                    /* _295 */
-  format S_HIBPQ CONDQ.;                    /* _296 */
-  format S_HIBPS YESNOP.;                   /* _297 */
-  format S_HIGOV YESNO.;                    /* _298 */
-  format S_HILTC YESNO.;                    /* _299 */
-  format S_HIOTHP HINS.;                    /* _301 */
-  format S_HISPAN HISPANIC.;                /* _302 */
-  format S_HLTC3 HLTC3_.;                   /* _324 */
-  format S_HLTC5 HLTC.;                     /* _325 */
-  format S_HLTC5F HLTCF.;                   /* _326 */
-  format S_HLTHLM YESNOW.;                  /* _327 */
-  format S_HOMCAR HOMCAR.;                  /* _328 */
-  format S_HOSP YESNO.;                     /* _329 */
-  format S_HRSAMP HRSAMP.;                  /* _330 */
-  format S_HSWRKF ACTF.;                    /* _333 */
-  format S_IFANN INCSUMF.;                  /* _339 */
-  format S_IFEARN INCSUMF.;                 /* _340 */
-  format S_IFGXFR INCSUMF.;                 /* _341 */
-  format S_IFIRAW INCSUMF.;                 /* _342 */
-  format S_IFIRAWY1 INCSUMF.;               /* _343 */
-  format S_IFPEN INCSUMF.;                  /* _344 */
-  format S_IFPENA INCSUMF.;                 /* _345 */
-  format S_IFSDI INCIMPF.;                  /* _346 */
-  format S_IFSRET INCSUMF.;                 /* _347 */
-  format S1_IFSSDI INCSUMF.;                /* _348 */
-  format S_IFSSDI INCSUMF.;                 /* _349 */
-  format S_IFSSI INCIMPF.;                  /* _350 */
-  format S_IFUNEM INCIMPF.;                 /* _351 */
-  format S1_IFUNWC INCSUMF.;                /* _352 */
-  format S2_IFUNWC INCSUMF.;                /* _353 */
-  format S_IFWCMP INCIMPF.;                 /* _354 */
-  format S_INHPE YESNO.;                    /* _361 */
-  format S_INLBRF UNEMP.;                   /* _367 */
-  format S_IWBEGF IWDTF.;                   /* _377 */
-  format S_IWENDF IWDTF.;                   /* _380 */
-  format S_IWMIDF IWMIDF.;                  /* _384 */
-  format S_IWSTAT IWSTAT.;                  /* _385 */
-  format S_JCIND INDUS.;                    /* _386 */
-  format S_JCINDB INDUSB.;                  /* _387 */
-  format S_JCINDC INDUSC.;                  /* _388 */
-  format S_JCOCC OCCUP.;                    /* _389 */
-  format S_JCOCCA OCCUPA.;                  /* _390 */
-  format S_JCOCCB OCCUPB.;                  /* _391 */
-  format S_JCOCCC OCCUPC.;                  /* _392 */
-  format S_JCPEN JCPEN.;                    /* _393 */
-  format S_JCPENF JCPENF.;                  /* _394 */
-  format S_JJOBS JJOBS.;                    /* _398 */
-  format S_JLIFT JOBREQ.;                   /* _401 */
-  format S_JLIND INDUS.;                    /* _402 */
-  format S_JLINDB INDUSB.;                  /* _403 */
-  format S_JLINDC INDUSC.;                  /* _404 */
-  format S_JLOCC OCCUP.;                    /* _406 */
-  format S_JLOCCA OCCUPA.;                  /* _407 */
-  format S_JLOCCB OCCUPB.;                  /* _408 */
-  format S_JLOCCC OCCUPC.;                  /* _409 */
-  format S_JLTENF JLTENF.;                  /* _411 */
-  format S1_JOG ADL_1C.;                    /* _415 */
-  format S2_JOG ADL_2C.;                    /* _416 */
-  format S_JOG ADLA.;                       /* _417 */
-  format S_JOGA ADLA.;                      /* _418 */
-  format S_JOGW ADLA.;                      /* _419 */
-  format S_JPHYS JOBREQ.;                   /* _420 */
-  format S_JSIGHT JOBREQ.;                  /* _421 */
-  format S_JSTOOP JOBREQ.;                  /* _422 */
-  format S_JSTRES STRESS.;                  /* _423 */
-  format S_JYEARM JYEARM.;                  /* _426 */
-  format S_LBASSISTPRB LBOCS.;              /* _429 */
-  format S_LBCOMP LBCOMP.;                  /* _430 */
-  format S_LBELIG LBELIG.;                  /* _433 */
-  format S_LBFAMDRUGPRB LBOCS.;             /* _435 */
-  format S_LBFAMHLTHPRB LBOCS.;             /* _436 */
-  format S_LBFINPRB LBOCS.;                 /* _437 */
-  format S_LBHLTHPRB LBOCS.;                /* _438 */
-  format S_LBHOUSEPRB LBOCS.;               /* _439 */
-  format S_LBRF LBRF.;                      /* _449 */
-  format S_LBRFH LBRF.;                     /* _450 */
-  format S_LBRFY LBRFY.;                    /* _451 */
-  format S_LBRLTNSHPRB LBOCS.;              /* _452 */
-  format S_LBSATCITY LBLFSAT5F.;            /* _453 */
-  format S_LBSATFAM LBLFSAT5F.;             /* _454 */
-  format S_LBSATFIN LBLFSAT5F.;             /* _455 */
-  format S_LBSATHLTH LBLFSAT5F.;            /* _456 */
-  format S_LBSATHOME LBLFSAT5F.;            /* _457 */
-  format S_LBSATINC LBLFSAT5F.;             /* _458 */
-  format S_LBSATLEISURE LBLFSAT5F.;         /* _459 */
-  format S_LBSATLIFE LBLFSAT5F.;            /* _460 */
-  format S_LBWORKPRB LBOCS.;                /* _463 */
-  format S_LHTACT YESNO.;                   /* _466 */
-  format S_LIFEIN YESNO.;                   /* _467 */
-  format S1_LIFT ADL_1C.;                   /* _468 */
-  format S2_LIFT ADL_2C.;                   /* _469 */
-  format S_LIFT ADLA.;                      /* _470 */
-  format S_LIFTA ADLA.;                     /* _471 */
-  format S_LIFTW ADLA.;                     /* _472 */
-  format S_LIV75F PRVIWF.;                  /* _479 */
-  format S_LIV85F PRVIWF.;                  /* _484 */
-  format S_LIV8XF PRVIWF.;                  /* _488 */
-  format S_LOST PRLOST.;                    /* _493 */
-  format S_LTACTF ACTF.;                    /* _494 */
-  format S_LTACTP ACTP.;                    /* _496 */
-  format S_LTACTX ACTX.;                    /* _497 */
-  format S_LUNG RAWCOND.;                   /* _499 */
-  format S_LUNGE YESNO.;                    /* _500 */
-  format S_LUNGF EVERF.;                    /* _502 */
-  format S_LUNGQ CONDQ.;                    /* _503 */
-  format S_LUNGS YESNOP.;                   /* _504 */
-  format S_MAMMOG PREVENT.;                 /* _505 */
-  format S1_MAP ADL_1C.;                    /* _506 */
-  format S2_MAP ADL_2C.;                    /* _507 */
-  format S_MAP ADLA.;                       /* _508 */
-  format S_MAPA ADLA.;                      /* _509 */
-  format S_MAPW ADLA.;                      /* _510 */
-  format S_MCWV ADL_1C.;                    /* _512 */
-  format S_MCWVW ADLA.;                     /* _513 */
-  format S_MDACTX ACTX.;                    /* _514 */
-  format S_MDIV NMAR.;                      /* _515 */
-  format S_MEALS ADLA.;                     /* _516 */
-  format S_MEALSA ADLA.;                    /* _517 */
-  format S_MEALSH ADL_7H.;                  /* _518 */
-  format S_MEALSR ADL_2I.;                  /* _519 */
-  format S2_MEDS ADL_2C.;                   /* _520 */
-  format S_MEDS ADLA.;                      /* _521 */
-  format S_MEDSA ADLA.;                     /* _522 */
-  format S_MEDSH ADL_7H.;                   /* _523 */
-  format S_MEDSR ADL_2I.;                   /* _524 */
-  format S_MEDUC MFEDYRS.;                  /* _525 */
-  format S_MEMRY RAWCOND.;                  /* _526 */
-  format S_MEMRYE YESNO.;                   /* _527 */
-  format S_MEMRYF MEMRYF.;                  /* _529 */
-  format S_MEMRYQ CONDQ.;                   /* _530 */
-  format S_MEMRYS YESNOP.;                  /* _531 */
-  format S_MEND NMAR.;                      /* _532 */
-  format S_MNEV MNEV.;                      /* _535 */
-  format S_MO COGCORR.;                     /* _536 */
-  format S_MOMLIV YNFAM.;                   /* _540 */
-  format S2_MONEY ADL_2C.;                  /* _541 */
-  format S_MONEY ADLA.;                     /* _542 */
-  format S_MONEYA ADLA.;                    /* _543 */
-  format S_MONEYH ADL_7H.;                  /* _544 */
-  format S_MONEYR ADL_2I.;                  /* _545 */
-  format S_MPART YESNO.;                    /* _546 */
-  format S_MRCT NMAR.;                      /* _547 */
-  format S_MSTAT MSTATUS.;                  /* _549 */
-  format S_MSTATF MSTATF.;                  /* _550 */
-  format S_MSTATH MSTATH.;                  /* _551 */
-  format S_MWID NMAR.;                      /* _553 */
-  format S_NHMLIV YESNO.;                   /* _555 */
-  format S_NOTICS COGNA.;                   /* _558 */
-  format S_NOVOC COGNA.;                    /* _559 */
-  format S_NRSHOM YESNO.;                   /* _560 */
-  format S_OOPMDF MDIMPH.;                  /* _568 */
-  format S_OOPMDOF MDIMP.;                  /* _570 */
-  format S_OUTPT YESNO.;                    /* _571 */
-  format S_PAPSM PREVENT.;                  /* _572 */
-  format S_PARTD PARTD.;                    /* _573 */
-  format S_PENCT PENNF.;                    /* _574 */
-  format S_PENIC1 PENCF.;                   /* _575 */
-  format S_PENIC2 PENCF.;                   /* _576 */
-  format S_PENINC YESNO.;                   /* _577 */
-  format S_PENI_N PENI_N.;                  /* _578 */
-  format S2_PHONE ADL_2C.;                  /* _579 */
-  format S_PHONE ADLA.;                     /* _580 */
-  format S_PHONEA ADLA.;                    /* _581 */
-  format S_PHONEH ADL_7H.;                  /* _582 */
-  format S_PHONER ADL_2I.;                  /* _583 */
-  format S_PMHGHTS PHYSMEASBIN.;            /* _586 */
-  format S_PMWAISTC PHYSMEASBIN.;           /* _588 */
-  format S_PMWGHTF FLOORT.;                 /* _590 */
-  format S_PMWGHTS PHYSMEASBIN.;            /* _591 */
-  format S_PRCHMEM PRCHMEMRY.;              /* _593 */
-  format S_PRES COGCORR.;                   /* _594 */
-  format S_PRMEM PRMEMRY.;                  /* _595 */
-  format S_PROST PREVENT.;                  /* _596 */
-  format S_PROXY PROXY.;                    /* _597 */
-  format S_PRSRC1 PRSRC.;                   /* _602 */
-  format S_PRSRC2 PRSRC.;                   /* _603 */
-  format S_PRSRC3 PRSRC.;                   /* _604 */
-  format S_PSTMEM COGMEMP.;                 /* _605 */
-  format S_PSYCH RAWCOND.;                  /* _606 */
-  format S_PSYCHE YESNO.;                   /* _607 */
-  format S_PSYCHF EVERF.;                   /* _609 */
-  format S_PSYCHQ CONDQ.;                   /* _610 */
-  format S_PSYCHS YESNOP.;                  /* _611 */
-  format S_PTYP1 PENTYP.;                   /* _612 */
-  format S_PTYP2 PENTYP.;                   /* _613 */
-  format S_PTYP3 PENTYP.;                   /* _614 */
-  format S_PTYP4 PENTYP.;                   /* _615 */
-  format S_PTYPD1 PENTYPD.;                 /* _616 */
-  format S_PTYPD2 PENTYPD.;                 /* _617 */
-  format S_PTYPD3 PENTYPD.;                 /* _618 */
-  format S_PTYPD4 PENTYPD.;                 /* _619 */
-  format S_PTYPF1 PENYESNO.;                /* _620 */
-  format S_PTYPF2 PENYESNO.;                /* _621 */
-  format S_PTYPF3 PENYESNO.;                /* _622 */
-  format S_PTYPF4 PENYESNO.;                /* _623 */
-  format S_PUFFPOS POSITION.;               /* _625 */
-  format S1_PUSH ADL_1C.;                   /* _626 */
-  format S2_PUSH ADL_2C.;                   /* _627 */
-  format S_PUSH ADLA.;                      /* _628 */
-  format S_PUSHA ADLA.;                     /* _629 */
-  format S_PUSHW ADLA.;                     /* _630 */
-  format S_RACEM RACEM.;                    /* _631 */
-  format S_RELIG RELIG.;                    /* _632 */
-  format S_RETEMP RETEMP.;                  /* _634 */
-  format S_RETINC RETINC.;                  /* _635 */
-  format S_RETLIV RETLIV.;                  /* _636 */
-  format S_RETSAT RETSAT.;                  /* _638 */
-  format S_RETWRK RETWRK.;                  /* _640 */
-  format S_RETWSP RETWSP.;                  /* _641 */
-  format S_RISK RISK.;                      /* _643 */
-  format S_RISK6 RISKA.;                    /* _644 */
-  format S_RYRCMP RYRCMP.;                  /* _648 */
-  format S_SADLF SADLF.;                    /* _649 */
-  format S_SAMEJOB SAMEJOB.;                /* _650 */
-  format S_SAMEMP SAMEMP.;                  /* _651 */
-  format S_SAYRET SAYRET.;                  /* _652 */
-  format S_SCIS COGCORR.;                   /* _653 */
-  format S_SDIAPL DISABW.;                  /* _654 */
-  format S_SDIAPP DISABW.;                  /* _657 */
-  format S_SDIDEN DISABW.;                  /* _660 */
-  format S_SDIREC DISABW.;                  /* _661 */
-  format S_SDISTP DISABW.;                  /* _664 */
-  format S_SHLT SHLT.;                      /* _668 */
-  format S_SHLTCF PRVIWF.;                  /* _670 */
-  format S_SHOP ADLA.;                      /* _671 */
-  format S_SHOPA ADLA.;                     /* _672 */
-  format S_SHOPH ADL_7H.;                   /* _673 */
-  format S_SHOPR ADL_2I.;                   /* _674 */
-  format S1_SIT ADL_1C.;                    /* _675 */
-  format S2_SIT ADL_2C.;                    /* _676 */
-  format S_SIT ADLA.;                       /* _677 */
-  format S_SITA ADLA.;                      /* _678 */
-  format S_SITW ADLA.;                      /* _679 */
-  format S_SLEEP RAWCOND.;                  /* _680 */
-  format S_SLEEPE YESNO.;                   /* _681 */
-  format S_SLEEPQ SLEEPQ.;                  /* _683 */
-  format S_SLEEPR YESNO.;                   /* _684 */
-  format S_SLEEPS YESNOP.;                  /* _685 */
-  format S_SLEEPX R1CESD.;                  /* _686 */
-  format S_SLFEMP SLFEMP.;                  /* _687 */
-  format S_SLFMEM COGMEMS.;                 /* _688 */
-  format S_SMOKEN YESNOS.;                  /* _689 */
-  format S_SMOKEV SMOKEV.;                  /* _690 */
-  format S_SPCFAC HOMCAR.;                  /* _691 */
-  format S_SSAPL DISABW.;                   /* _692 */
-  format S_SSAPP DISABW.;                   /* _695 */
-  format S_SSDEN DISABW.;                   /* _698 */
-  format S_SSDI YESNO.;                     /* _699 */
-  format S_SSIAPL DISABW.;                  /* _700 */
-  format S_SSIAPP DISABW.;                  /* _703 */
-  format S_SSIDEN DISABW.;                  /* _706 */
-  format S_SSIREC DISABW.;                  /* _707 */
-  format S_SSISTP DISABW.;                  /* _710 */
-  format S_SSREC DISABW.;                   /* _713 */
-  format S_SSSTP DISABW.;                   /* _716 */
-  format S_STATUS COGSTAT.;                 /* _725 */
-  format S1_STOOP ADL_1C.;                  /* _726 */
-  format S2_STOOP ADL_2C.;                  /* _727 */
-  format S_STOOP ADLA.;                     /* _728 */
-  format S_STOOPA ADLA.;                    /* _729 */
-  format S_STOOPW ADLA.;                    /* _730 */
-  format S_STROK RAWCOND.;                  /* _731 */
-  format S_STROKE YESNO.;                   /* _732 */
-  format S_STROKF EVERF.;                   /* _734 */
-  format S_STROKQ CONDQ.;                   /* _735 */
-  format S_STROKS YESNOP.;                  /* _736 */
-  format S_TIMWLKA TIMWLKA.;                /* _738 */
-  format S2_TOILT ADL_2C.;                  /* _740 */
-  format S_TOILT ADLA.;                     /* _741 */
-  format S_TOILTA ADLA.;                    /* _742 */
-  format S2_TOILTH ADL_2H.;                 /* _743 */
-  format S_TOILTH ADL_7H.;                  /* _744 */
-  format S_TOTMBF MDIMP.;                   /* _745 */
-  format S_TOTMBI TOTMBR.;                  /* _746 */
-  format S_TOTMDF MEDIMPF.;                 /* _748 */
-  format S_TYLTC TYLTC.;                    /* _751 */
-  format S_ULCER YESNO.;                    /* _752 */
-  format S_UNEMP UNEMP.;                    /* _753 */
-  format S_UNION UNION.;                    /* _754 */
-  format S_UNIONF FORWARD.;                 /* _755 */
-  format S_VETRN YESNO.;                    /* _756 */
-  format S_VGACTF ACTF.;                    /* _757 */
-  format S_VGACTP ACTP.;                    /* _759 */
-  format S_VGACTX ACTX.;                    /* _760 */
-  format S_VIGACT YESNO.;                   /* _761 */
-  format S_VOCAB COGMISS.;                  /* _762 */
-  format S_VP COGCORR.;                     /* _763 */
-  format S1_WALK1 ADL_1C.;                  /* _764 */
-  format S2_WALK1 ADL_2C.;                  /* _765 */
-  format S_WALK1 ADLA.;                     /* _766 */
-  format S_WALK1A ADLA.;                    /* _767 */
-  format S_WALK1W ADLA.;                    /* _768 */
-  format S1_WALKR ADL_1C.;                  /* _769 */
-  format S2_WALKR ADL_2C.;                  /* _770 */
-  format S_WALKR ADLA.;                     /* _771 */
-  format S_WALKRA ADLA.;                    /* _772 */
-  format S_WALKRE EQVPMT.;                  /* _773 */
-  format S2_WALKRH ADL_2H.;                 /* _774 */
-  format S_WALKRH ADL_7H.;                  /* _775 */
-  format S_WALKRW ADLA.;                    /* _776 */
-  format S1_WALKS ADL_1C.;                  /* _777 */
-  format S2_WALKS ADL_2C.;                  /* _778 */
-  format S_WALKS ADLA.;                     /* _779 */
-  format S_WALKSA ADLA.;                    /* _780 */
-  format S_WALKSW ADLA.;                    /* _781 */
-  format S_WANDER PRLOST.;                  /* _782 */
-  format S_WGFHR WGF.;                      /* _784 */
-  format S_WGFWK WGF.;                      /* _785 */
-  format S_WHAPPX R1CESD.;                  /* _788 */
-  format S_WHAPPY YESNO.;                   /* _789 */
-  format S_WORK WORK.;                      /* _791 */
-  format S_WORK2 WORK.;                     /* _792 */
-  format S_WORK62F WORKFLAGS.;              /* _794 */
-  format S_WORK65F WORKFLAGS.;              /* _796 */
-  format S_WORK70AF WORKFLAGS.;             /* _799 */
-  format S_WORK70F WORKFLAGS.;              /* _800 */
-  format S_YR COGCORR.;                     /* _805 */
+  format SASSRECV YESNO.;                   /* _17 */
+  format S_AHDSMP AHDSMP.;                  /* _31 */
+  format S_ALONE PRLOST.;                   /* _33 */
+  format S_ALZHE RAWCOND.;                  /* _34 */
+  format S_ALZHEE YESNO.;                   /* _35 */
+  format S_ALZHEF MEMRYF.;                  /* _37 */
+  format S_ALZHEQ CONDQ.;                   /* _38 */
+  format S_ALZHES YESNOP.;                  /* _39 */
+  format S_ANS3PQ YESNO.;                   /* _41 */
+  format S1_ARMS ADL_1C.;                   /* _42 */
+  format S2_ARMS ADL_2C.;                   /* _43 */
+  format S_ARMS ADLA.;                      /* _44 */
+  format S_ARMSA ADLA.;                     /* _45 */
+  format S_ARMSW ADLA.;                     /* _46 */
+  format S_ARTHR RAWCOND.;                  /* _47 */
+  format S_ARTHRE YESNO.;                   /* _48 */
+  format S_ARTHRF EVERF.;                   /* _50 */
+  format S_ARTHRQ CONDQ.;                   /* _51 */
+  format S_ARTHRS YESNOP.;                  /* _52 */
+  format S_BACK PREVENT.;                   /* _54 */
+  format S_BALFULC PHYSMEASBIN.;            /* _56 */
+  format S_BALFULT PHYSMEASBIN.;            /* _57 */
+  format S_BALSBSC PHYSMEASBIN.;            /* _59 */
+  format S_BALSEMIC PHYSMEASBIN.;           /* _61 */
+  format S1_BATH ADL_1C.;                   /* _62 */
+  format S2_BATH ADL_2C.;                   /* _63 */
+  format S_BATH ADLA.;                      /* _64 */
+  format S_BATHA ADLA.;                     /* _65 */
+  format S2_BATHH ADL_2H.;                  /* _66 */
+  format S_BATHH ADL_7H.;                   /* _67 */
+  format S_BATHW ADLA.;                     /* _68 */
+  format S1_BED ADL_1C.;                    /* _70 */
+  format S2_BED ADL_2C.;                    /* _71 */
+  format S_BED ADLA.;                       /* _72 */
+  format S_BEDA ADLA.;                      /* _73 */
+  format S_BEDE EQVPMT.;                    /* _74 */
+  format S2_BEDH ADL_2H.;                   /* _75 */
+  format S_BEDH ADL_7H.;                    /* _76 */
+  format S_BEDW ADLA.;                      /* _77 */
+  format S_BEQLRG BEQLRG.;                  /* _82 */
+  format S_BFLAG RABFLAG.;                  /* _83 */
+  format S_BPLACE CENDIV.;                  /* _87 */
+  format S_BPLACF BPLACF.;                  /* _88 */
+  format S_BPPOS POSITION.;                 /* _89 */
+  format S_BREAST PREVENT.;                 /* _92 */
+  format S_BWC20 COGCNT.;                   /* _93 */
+  format S_BWC86 COGCNT.;                   /* _94 */
+  format S_CACT COGCORR.;                   /* _96 */
+  format S1_CALC ADL_1C.;                   /* _97 */
+  format S2_CALC ADL_2C.;                   /* _98 */
+  format S_CALCA ADLA.;                     /* _99 */
+  format S_CALCW ADLA.;                     /* _100 */
+  format S_CANCR RAWCOND.;                  /* _101 */
+  format S_CANCRE YESNO.;                   /* _102 */
+  format S_CANCRF EVERF.;                   /* _104 */
+  format S_CANCRQ CONDQ.;                   /* _105 */
+  format S_CANCRS YESNOP.;                  /* _106 */
+  format S_CENDIV CENDIV.;                  /* _107 */
+  format S_CENREG CENREG.;                  /* _108 */
+  format S1_CHAIR ADL_1C.;                  /* _111 */
+  format S2_CHAIR ADL_2C.;                  /* _112 */
+  format S_CHAIR ADLA.;                     /* _113 */
+  format S_CHAIRA ADLA.;                    /* _114 */
+  format S_CHAIRW ADLA.;                    /* _115 */
+  format S_CHOLST PREVENT.;                 /* _116 */
+  format S_CLAIMED YESNO.;                  /* _117 */
+  format S1_CLIM1 ADL_1C.;                  /* _118 */
+  format S2_CLIM1 ADL_2C.;                  /* _119 */
+  format S_CLIM1 ADLA.;                     /* _120 */
+  format S_CLIM1A ADLA.;                    /* _121 */
+  format S_CLIM1W ADLA.;                    /* _122 */
+  format S1_CLIMS ADL_1C.;                  /* _123 */
+  format S2_CLIMS ADL_2C.;                  /* _124 */
+  format S_CLIMS ADLA.;                     /* _125 */
+  format S_CLIMSA ADLA.;                    /* _126 */
+  format S_CLIMSW ADLA.;                    /* _127 */
+  format S_COHBYR COHBYR.;                  /* _129 */
+  format S_COMP ADL_1C.;                    /* _131 */
+  format S_COMPW ADLA.;                     /* _132 */
+  format S_CONDSP PRVIWF.;                  /* _137 */
+  format S_COVR HINS.;                      /* _138 */
+  format S_COVRT HINS.;                     /* _139 */
+  format S_COVS HINS.;                      /* _140 */
+  format S_DADLIV YNFAM.;                   /* _142 */
+  format S_DCMODE1 DCF.;                    /* _157 */
+  format S_DCMODE2 DCF.;                    /* _158 */
+  format S_DCMODE3 DCF.;                    /* _159 */
+  format S_DCMODE4 DCF.;                    /* _160 */
+  format S_DEMEN RAWCOND.;                  /* _166 */
+  format S_DEMENE YESNO.;                   /* _167 */
+  format S_DEMENF MEMRYF.;                  /* _169 */
+  format S_DEMENQ CONDQ.;                   /* _170 */
+  format S_DEMENS YESNOP.;                  /* _171 */
+  format S_DENTST YESNO.;                   /* _172 */
+  format S_DEPRES YESNO.;                   /* _173 */
+  format S_DEPREX R1CESD.;                  /* _174 */
+  format S_DIAB RAWCOND.;                   /* _175 */
+  format S_DIABE YESNO.;                    /* _176 */
+  format S_DIABF EVERF.;                    /* _178 */
+  format S_DIABQ CONDQ.;                    /* _179 */
+  format S_DIABS YESNOP.;                   /* _180 */
+  format S1_DIME ADL_1C.;                   /* _181 */
+  format S2_DIME ADL_2C.;                   /* _182 */
+  format S_DIME ADLA.;                      /* _183 */
+  format S_DIMEA ADLA.;                     /* _184 */
+  format S_DIMEW ADLA.;                     /* _185 */
+  format S_DOCTOR YESNO.;                   /* _190 */
+  format S1_DRESS ADL_1C.;                  /* _191 */
+  format S2_DRESS ADL_2C.;                  /* _192 */
+  format S_DRESS ADLA.;                     /* _193 */
+  format S_DRESSA ADLA.;                    /* _194 */
+  format S2_DRESSH ADL_2H.;                 /* _195 */
+  format S_DRESSH ADL_7H.;                  /* _196 */
+  format S_DRESSW ADLA.;                    /* _197 */
+  format S_DRINK YESNO.;                    /* _198 */
+  format S_DRINKD DRINKX.;                  /* _199 */
+  format S_DRINKN DRINKX.;                  /* _200 */
+  format S_DRINKR DRINKR.;                  /* _201 */
+  format S_DRUGS YESNO.;                    /* _202 */
+  format S_DSRC DDSRC.;                     /* _204 */
+  format S_DSTAT RFDSTAT.;                  /* _206 */
+  format S_DW COGCORR.;                     /* _208 */
+  format S_DY COGCORR.;                     /* _209 */
+  format S1_EAT ADL_1C.;                    /* _211 */
+  format S2_EAT ADL_2C.;                    /* _212 */
+  format S_EAT ADLA.;                       /* _213 */
+  format S_EATA ADLA.;                      /* _214 */
+  format S2_EATH ADL_2H.;                   /* _215 */
+  format S_EATH ADL_7H.;                    /* _216 */
+  format S_EATW ADLA.;                      /* _217 */
+  format S_EDEGRM EDEGRM.;                  /* _218 */
+  format S_EDUC EDUC.;                      /* _219 */
+  format S_EDYRS EDYRS.;                    /* _220 */
+  format S_EFFORT YESNO.;                   /* _221 */
+  format S_EFFORX R1CESD.;                  /* _222 */
+  format S_ENLIFE YESNO.;                   /* _223 */
+  format S_ENLIFX R1CESD.;                  /* _224 */
+  format S_EVBRNF EVRBORNF.;                /* _226 */
+  format S_FAMR YESNO.;                     /* _227 */
+  format S_FBWC20 COGIMP.;                  /* _228 */
+  format S_FBWC86 COGIMP.;                  /* _229 */
+  format S_FCACT COGIMP.;                   /* _230 */
+  format S_FDLRC COGIMP.;                   /* _231 */
+  format S_FDW COGIMP.;                     /* _232 */
+  format S_FDY COGIMP.;                     /* _233 */
+  format S_FEDUC MFEDYRS.;                  /* _234 */
+  format S_FIMRC COGIMP.;                   /* _235 */
+  format S_FINPLN FINPLN.;                  /* _237 */
+  format S_FINR YESNO.;                     /* _238 */
+  format S_FLAG WFLAG.;                     /* _239 */
+  format S_FLONE YESNO.;                    /* _240 */
+  format S_FLONEX R1CESD.;                  /* _241 */
+  format S_FLUSHT PREVENT.;                 /* _242 */
+  format S_FMO COGIMP.;                     /* _243 */
+  format S_FPRES COGIMP.;                   /* _244 */
+  format S_FPSTME COGIMP.;                  /* _245 */
+  format S_FSAD YESNO.;                     /* _246 */
+  format S_FSADX R1CESD.;                   /* _247 */
+  format S_FSCIS COGIMP.;                   /* _248 */
+  format S_FSER7 COGIMP.;                   /* _249 */
+  format S_FSIZEF FORWARD.;                 /* _251 */
+  format S_FSLFME COGIMP.;                  /* _252 */
+  format S_FVOCAB COGIMP.;                  /* _253 */
+  format S_FVP COGIMP.;                     /* _254 */
+  format S_FYR COGIMP.;                     /* _255 */
+  format S_GENDER GENDER.;                  /* _256 */
+  format S_GOING YESNO.;                    /* _257 */
+  format S_GOINGX R1CESD.;                  /* _258 */
+  format S_GOVMD YESNO.;                    /* _259 */
+  format S_GOVMR YESNO.;                    /* _260 */
+  format S_GOVOT YESNO.;                    /* _261 */
+  format S_GOVVA YESNO.;                    /* _262 */
+  format S_GRPDOM GRPDOM.;                  /* _265 */
+  format S_GRPPOS POSITION.;                /* _267 */
+  format S_HALUC PRLOST.;                   /* _269 */
+  format S_HEART RAWCOND.;                  /* _271 */
+  format S_HEARTE YESNO.;                   /* _272 */
+  format S_HEARTF EVERF.;                   /* _274 */
+  format S_HEARTQ CONDQ.;                   /* _275 */
+  format S_HEARTS YESNOP.;                  /* _276 */
+  format S_HECOV1 RHCOV.;                   /* _277 */
+  format S_HECOV2 RHCOV.;                   /* _278 */
+  format S_HECOV3 RHCOV.;                   /* _279 */
+  format S_HERET COVRT.;                    /* _282 */
+  format S_HERTR1 COVRT.;                   /* _283 */
+  format S_HERTR2 COVRT.;                   /* _284 */
+  format S_HERTR3 COVRT.;                   /* _285 */
+  format S_HERTS1 COVRT.;                   /* _286 */
+  format S_HERTS2 COVRT.;                   /* _287 */
+  format S_HERTS3 COVRT.;                   /* _288 */
+  format S_HESRC1 RHSRC.;                   /* _289 */
+  format S_HESRC2 RHSRC.;                   /* _290 */
+  format S_HESRC3 RHSRC.;                   /* _291 */
+  format S_HIBP RAWCOND.;                   /* _293 */
+  format S_HIBPE YESNO.;                    /* _294 */
+  format S_HIBPF EVERF.;                    /* _296 */
+  format S_HIBPQ CONDQ.;                    /* _297 */
+  format S_HIBPS YESNOP.;                   /* _298 */
+  format S_HIGOV YESNO.;                    /* _299 */
+  format S_HILTC YESNO.;                    /* _300 */
+  format S_HIOTHP HINS.;                    /* _302 */
+  format S_HISPAN HISPANIC.;                /* _303 */
+  format S_HLTC3 HLTC3_.;                   /* _325 */
+  format S_HLTC5 HLTC.;                     /* _326 */
+  format S_HLTC5F HLTCF.;                   /* _327 */
+  format S_HLTHLM YESNOW.;                  /* _328 */
+  format S_HOMCAR HOMCAR.;                  /* _329 */
+  format S_HOSP YESNO.;                     /* _330 */
+  format S_HRSAMP HRSAMP.;                  /* _331 */
+  format S_HSWRKF ACTF.;                    /* _334 */
+  format S_IFANN INCSUMF.;                  /* _340 */
+  format S_IFEARN INCSUMF.;                 /* _341 */
+  format S_IFGXFR INCSUMF.;                 /* _342 */
+  format S_IFIRAW INCSUMF.;                 /* _343 */
+  format S_IFIRAWY1 INCSUMF.;               /* _344 */
+  format S_IFPEN INCSUMF.;                  /* _345 */
+  format S_IFPENA INCSUMF.;                 /* _346 */
+  format S_IFSDI INCIMPF.;                  /* _347 */
+  format S_IFSRET INCSUMF.;                 /* _348 */
+  format S1_IFSSDI INCSUMF.;                /* _349 */
+  format S_IFSSDI INCSUMF.;                 /* _350 */
+  format S_IFSSI INCIMPF.;                  /* _351 */
+  format S_IFUNEM INCIMPF.;                 /* _352 */
+  format S1_IFUNWC INCSUMF.;                /* _353 */
+  format S2_IFUNWC INCSUMF.;                /* _354 */
+  format S_IFWCMP INCIMPF.;                 /* _355 */
+  format S_INHPE YESNO.;                    /* _362 */
+  format S_INLBRF UNEMP.;                   /* _368 */
+  format S_IWBEGF IWDTF.;                   /* _378 */
+  format S_IWENDF IWDTF.;                   /* _381 */
+  format S_IWMIDF IWMIDF.;                  /* _385 */
+  format S_IWSTAT IWSTAT.;                  /* _386 */
+  format S_JCIND INDUS.;                    /* _387 */
+  format S_JCINDB INDUSB.;                  /* _388 */
+  format S_JCINDC INDUSC.;                  /* _389 */
+  format S_JCOCC OCCUP.;                    /* _390 */
+  format S_JCOCCA OCCUPA.;                  /* _391 */
+  format S_JCOCCB OCCUPB.;                  /* _392 */
+  format S_JCOCCC OCCUPC.;                  /* _393 */
+  format S_JCPEN JCPEN.;                    /* _394 */
+  format S_JCPENF JCPENF.;                  /* _395 */
+  format S_JJOBS JJOBS.;                    /* _399 */
+  format S_JLIFT JOBREQ.;                   /* _402 */
+  format S_JLIND INDUS.;                    /* _403 */
+  format S_JLINDB INDUSB.;                  /* _404 */
+  format S_JLINDC INDUSC.;                  /* _405 */
+  format S_JLOCC OCCUP.;                    /* _407 */
+  format S_JLOCCA OCCUPA.;                  /* _408 */
+  format S_JLOCCB OCCUPB.;                  /* _409 */
+  format S_JLOCCC OCCUPC.;                  /* _410 */
+  format S_JLTENF JLTENF.;                  /* _412 */
+  format S1_JOG ADL_1C.;                    /* _416 */
+  format S2_JOG ADL_2C.;                    /* _417 */
+  format S_JOG ADLA.;                       /* _418 */
+  format S_JOGA ADLA.;                      /* _419 */
+  format S_JOGW ADLA.;                      /* _420 */
+  format S_JPHYS JOBREQ.;                   /* _421 */
+  format S_JSIGHT JOBREQ.;                  /* _422 */
+  format S_JSTOOP JOBREQ.;                  /* _423 */
+  format S_JSTRES STRESS.;                  /* _424 */
+  format S_JYEARM JYEARM.;                  /* _427 */
+  format S_LBASSISTPRB LBOCS.;              /* _430 */
+  format S_LBCOMP LBCOMP.;                  /* _431 */
+  format S_LBELIG LBELIG.;                  /* _434 */
+  format S_LBFAMDRUGPRB LBOCS.;             /* _436 */
+  format S_LBFAMHLTHPRB LBOCS.;             /* _437 */
+  format S_LBFINPRB LBOCS.;                 /* _438 */
+  format S_LBHLTHPRB LBOCS.;                /* _439 */
+  format S_LBHOUSEPRB LBOCS.;               /* _440 */
+  format S_LBRF LBRF.;                      /* _450 */
+  format S_LBRFH LBRF.;                     /* _451 */
+  format S_LBRFY LBRFY.;                    /* _452 */
+  format S_LBRLTNSHPRB LBOCS.;              /* _453 */
+  format S_LBSATCITY LBLFSAT5F.;            /* _454 */
+  format S_LBSATFAM LBLFSAT5F.;             /* _455 */
+  format S_LBSATFIN LBLFSAT5F.;             /* _456 */
+  format S_LBSATHLTH LBLFSAT5F.;            /* _457 */
+  format S_LBSATHOME LBLFSAT5F.;            /* _458 */
+  format S_LBSATINC LBLFSAT5F.;             /* _459 */
+  format S_LBSATLEISURE LBLFSAT5F.;         /* _460 */
+  format S_LBSATLIFE LBLFSAT5F.;            /* _461 */
+  format S_LBWORKPRB LBOCS.;                /* _464 */
+  format S_LHTACT YESNO.;                   /* _467 */
+  format S_LIFEIN YESNO.;                   /* _468 */
+  format S1_LIFT ADL_1C.;                   /* _469 */
+  format S2_LIFT ADL_2C.;                   /* _470 */
+  format S_LIFT ADLA.;                      /* _471 */
+  format S_LIFTA ADLA.;                     /* _472 */
+  format S_LIFTW ADLA.;                     /* _473 */
+  format S_LIV75F PRVIWF.;                  /* _480 */
+  format S_LIV85F PRVIWF.;                  /* _485 */
+  format S_LIV8XF PRVIWF.;                  /* _489 */
+  format S_LOST PRLOST.;                    /* _494 */
+  format S_LTACTF ACTF.;                    /* _495 */
+  format S_LTACTP ACTP.;                    /* _497 */
+  format S_LTACTX ACTX.;                    /* _498 */
+  format S_LUNG RAWCOND.;                   /* _500 */
+  format S_LUNGE YESNO.;                    /* _501 */
+  format S_LUNGF EVERF.;                    /* _503 */
+  format S_LUNGQ CONDQ.;                    /* _504 */
+  format S_LUNGS YESNOP.;                   /* _505 */
+  format S_MAMMOG PREVENT.;                 /* _506 */
+  format S1_MAP ADL_1C.;                    /* _507 */
+  format S2_MAP ADL_2C.;                    /* _508 */
+  format S_MAP ADLA.;                       /* _509 */
+  format S_MAPA ADLA.;                      /* _510 */
+  format S_MAPW ADLA.;                      /* _511 */
+  format S_MCWV ADL_1C.;                    /* _513 */
+  format S_MCWVW ADLA.;                     /* _514 */
+  format S_MDACTX ACTX.;                    /* _515 */
+  format S_MDIV NMAR.;                      /* _516 */
+  format S_MEALS ADLA.;                     /* _517 */
+  format S_MEALSA ADLA.;                    /* _518 */
+  format S_MEALSH ADL_7H.;                  /* _519 */
+  format S_MEALSR ADL_2I.;                  /* _520 */
+  format S2_MEDS ADL_2C.;                   /* _521 */
+  format S_MEDS ADLA.;                      /* _522 */
+  format S_MEDSA ADLA.;                     /* _523 */
+  format S_MEDSH ADL_7H.;                   /* _524 */
+  format S_MEDSR ADL_2I.;                   /* _525 */
+  format S_MEDUC MFEDYRS.;                  /* _526 */
+  format S_MEMRY RAWCOND.;                  /* _527 */
+  format S_MEMRYE YESNO.;                   /* _528 */
+  format S_MEMRYF MEMRYF.;                  /* _530 */
+  format S_MEMRYQ CONDQ.;                   /* _531 */
+  format S_MEMRYS YESNOP.;                  /* _532 */
+  format S_MEND NMAR.;                      /* _533 */
+  format S_MNEV MNEV.;                      /* _536 */
+  format S_MO COGCORR.;                     /* _537 */
+  format S_MOMLIV YNFAM.;                   /* _541 */
+  format S2_MONEY ADL_2C.;                  /* _542 */
+  format S_MONEY ADLA.;                     /* _543 */
+  format S_MONEYA ADLA.;                    /* _544 */
+  format S_MONEYH ADL_7H.;                  /* _545 */
+  format S_MONEYR ADL_2I.;                  /* _546 */
+  format S_MPART YESNO.;                    /* _547 */
+  format S_MRCT NMAR.;                      /* _548 */
+  format S_MSTAT MSTATUS.;                  /* _550 */
+  format S_MSTATF MSTATF.;                  /* _551 */
+  format S_MSTATH MSTATH.;                  /* _552 */
+  format S_MWID NMAR.;                      /* _554 */
+  format S_NHMLIV YESNO.;                   /* _556 */
+  format S_NOTICS COGNA.;                   /* _559 */
+  format S_NOVOC COGNA.;                    /* _560 */
+  format S_NRSHOM YESNO.;                   /* _561 */
+  format S_OOPMDF MDIMPH.;                  /* _569 */
+  format S_OOPMDOF MDIMP.;                  /* _571 */
+  format S_OUTPT YESNO.;                    /* _572 */
+  format S_PAPSM PREVENT.;                  /* _573 */
+  format S_PARTD PARTD.;                    /* _574 */
+  format S_PENCT PENNF.;                    /* _575 */
+  format S_PENIC1 PENCF.;                   /* _576 */
+  format S_PENIC2 PENCF.;                   /* _577 */
+  format S_PENINC YESNO.;                   /* _578 */
+  format S_PENI_N PENI_N.;                  /* _579 */
+  format S2_PHONE ADL_2C.;                  /* _580 */
+  format S_PHONE ADLA.;                     /* _581 */
+  format S_PHONEA ADLA.;                    /* _582 */
+  format S_PHONEH ADL_7H.;                  /* _583 */
+  format S_PHONER ADL_2I.;                  /* _584 */
+  format S_PMHGHTS PHYSMEASBIN.;            /* _587 */
+  format S_PMWAISTC PHYSMEASBIN.;           /* _589 */
+  format S_PMWGHTF FLOORT.;                 /* _591 */
+  format S_PMWGHTS PHYSMEASBIN.;            /* _592 */
+  format S_PRCHMEM PRCHMEMRY.;              /* _594 */
+  format S_PRES COGCORR.;                   /* _595 */
+  format S_PRMEM PRMEMRY.;                  /* _596 */
+  format S_PROST PREVENT.;                  /* _597 */
+  format S_PROXY PROXY.;                    /* _598 */
+  format S_PRSRC1 PRSRC.;                   /* _603 */
+  format S_PRSRC2 PRSRC.;                   /* _604 */
+  format S_PRSRC3 PRSRC.;                   /* _605 */
+  format S_PSTMEM COGMEMP.;                 /* _606 */
+  format S_PSYCH RAWCOND.;                  /* _607 */
+  format S_PSYCHE YESNO.;                   /* _608 */
+  format S_PSYCHF EVERF.;                   /* _610 */
+  format S_PSYCHQ CONDQ.;                   /* _611 */
+  format S_PSYCHS YESNOP.;                  /* _612 */
+  format S_PTYP1 PENTYP.;                   /* _613 */
+  format S_PTYP2 PENTYP.;                   /* _614 */
+  format S_PTYP3 PENTYP.;                   /* _615 */
+  format S_PTYP4 PENTYP.;                   /* _616 */
+  format S_PTYPD1 PENTYPD.;                 /* _617 */
+  format S_PTYPD2 PENTYPD.;                 /* _618 */
+  format S_PTYPD3 PENTYPD.;                 /* _619 */
+  format S_PTYPD4 PENTYPD.;                 /* _620 */
+  format S_PTYPF1 PENYESNO.;                /* _621 */
+  format S_PTYPF2 PENYESNO.;                /* _622 */
+  format S_PTYPF3 PENYESNO.;                /* _623 */
+  format S_PTYPF4 PENYESNO.;                /* _624 */
+  format S_PUFFPOS POSITION.;               /* _626 */
+  format S1_PUSH ADL_1C.;                   /* _627 */
+  format S2_PUSH ADL_2C.;                   /* _628 */
+  format S_PUSH ADLA.;                      /* _629 */
+  format S_PUSHA ADLA.;                     /* _630 */
+  format S_PUSHW ADLA.;                     /* _631 */
+  format S_RACEM RACEM.;                    /* _632 */
+  format S_RELIG RELIG.;                    /* _633 */
+  format S_RETEMP RETEMP.;                  /* _635 */
+  format S_RETINC RETINC.;                  /* _636 */
+  format S_RETLIV RETLIV.;                  /* _637 */
+  format S_RETSAT RETSAT.;                  /* _639 */
+  format S_RETWRK RETWRK.;                  /* _641 */
+  format S_RETWSP RETWSP.;                  /* _642 */
+  format S_RISK RISK.;                      /* _644 */
+  format S_RISK6 RISKA.;                    /* _645 */
+  format S_RYRCMP RYRCMP.;                  /* _649 */
+  format S_SADLF SADLF.;                    /* _650 */
+  format S_SAMEJOB SAMEJOB.;                /* _651 */
+  format S_SAMEMP SAMEMP.;                  /* _652 */
+  format S_SAYRET SAYRET.;                  /* _653 */
+  format S_SCIS COGCORR.;                   /* _654 */
+  format S_SDIAPL DISABW.;                  /* _655 */
+  format S_SDIAPP DISABW.;                  /* _658 */
+  format S_SDIDEN DISABW.;                  /* _661 */
+  format S_SDIREC DISABW.;                  /* _662 */
+  format S_SDISTP DISABW.;                  /* _665 */
+  format S_SHLT SHLT.;                      /* _669 */
+  format S_SHLTCF PRVIWF.;                  /* _671 */
+  format S_SHOP ADLA.;                      /* _672 */
+  format S_SHOPA ADLA.;                     /* _673 */
+  format S_SHOPH ADL_7H.;                   /* _674 */
+  format S_SHOPR ADL_2I.;                   /* _675 */
+  format S1_SIT ADL_1C.;                    /* _676 */
+  format S2_SIT ADL_2C.;                    /* _677 */
+  format S_SIT ADLA.;                       /* _678 */
+  format S_SITA ADLA.;                      /* _679 */
+  format S_SITW ADLA.;                      /* _680 */
+  format S_SLEEP RAWCOND.;                  /* _681 */
+  format S_SLEEPE YESNO.;                   /* _682 */
+  format S_SLEEPQ SLEEPQ.;                  /* _684 */
+  format S_SLEEPR YESNO.;                   /* _685 */
+  format S_SLEEPS YESNOP.;                  /* _686 */
+  format S_SLEEPX R1CESD.;                  /* _687 */
+  format S_SLFEMP SLFEMP.;                  /* _688 */
+  format S_SLFMEM COGMEMS.;                 /* _689 */
+  format S_SMOKEN YESNOS.;                  /* _690 */
+  format S_SMOKEV SMOKEV.;                  /* _691 */
+  format S_SPCFAC HOMCAR.;                  /* _692 */
+  format S_SSAPL DISABW.;                   /* _693 */
+  format S_SSAPP DISABW.;                   /* _696 */
+  format S_SSDEN DISABW.;                   /* _699 */
+  format S_SSDI YESNO.;                     /* _700 */
+  format S_SSIAPL DISABW.;                  /* _701 */
+  format S_SSIAPP DISABW.;                  /* _704 */
+  format S_SSIDEN DISABW.;                  /* _707 */
+  format S_SSIREC DISABW.;                  /* _708 */
+  format S_SSISTP DISABW.;                  /* _711 */
+  format S_SSREC DISABW.;                   /* _714 */
+  format S_SSSTP DISABW.;                   /* _717 */
+  format S_STATUS COGSTAT.;                 /* _726 */
+  format S1_STOOP ADL_1C.;                  /* _727 */
+  format S2_STOOP ADL_2C.;                  /* _728 */
+  format S_STOOP ADLA.;                     /* _729 */
+  format S_STOOPA ADLA.;                    /* _730 */
+  format S_STOOPW ADLA.;                    /* _731 */
+  format S_STROK RAWCOND.;                  /* _732 */
+  format S_STROKE YESNO.;                   /* _733 */
+  format S_STROKF EVERF.;                   /* _735 */
+  format S_STROKQ CONDQ.;                   /* _736 */
+  format S_STROKS YESNOP.;                  /* _737 */
+  format S_TIMWLKA TIMWLKA.;                /* _739 */
+  format S2_TOILT ADL_2C.;                  /* _741 */
+  format S_TOILT ADLA.;                     /* _742 */
+  format S_TOILTA ADLA.;                    /* _743 */
+  format S2_TOILTH ADL_2H.;                 /* _744 */
+  format S_TOILTH ADL_7H.;                  /* _745 */
+  format S_TOTMBF MDIMP.;                   /* _746 */
+  format S_TOTMBI TOTMBR.;                  /* _747 */
+  format S_TOTMDF MEDIMPF.;                 /* _749 */
+  format S_TYLTC TYLTC.;                    /* _752 */
+  format S_ULCER YESNO.;                    /* _753 */
+  format S_UNEMP UNEMP.;                    /* _754 */
+  format S_UNION UNION.;                    /* _755 */
+  format S_UNIONF FORWARD.;                 /* _756 */
+  format S_VETRN YESNO.;                    /* _757 */
+  format S_VGACTF ACTF.;                    /* _758 */
+  format S_VGACTP ACTP.;                    /* _760 */
+  format S_VGACTX ACTX.;                    /* _761 */
+  format S_VIGACT YESNO.;                   /* _762 */
+  format S_VOCAB COGMISS.;                  /* _763 */
+  format S_VP COGCORR.;                     /* _764 */
+  format S1_WALK1 ADL_1C.;                  /* _765 */
+  format S2_WALK1 ADL_2C.;                  /* _766 */
+  format S_WALK1 ADLA.;                     /* _767 */
+  format S_WALK1A ADLA.;                    /* _768 */
+  format S_WALK1W ADLA.;                    /* _769 */
+  format S1_WALKR ADL_1C.;                  /* _770 */
+  format S2_WALKR ADL_2C.;                  /* _771 */
+  format S_WALKR ADLA.;                     /* _772 */
+  format S_WALKRA ADLA.;                    /* _773 */
+  format S_WALKRE EQVPMT.;                  /* _774 */
+  format S2_WALKRH ADL_2H.;                 /* _775 */
+  format S_WALKRH ADL_7H.;                  /* _776 */
+  format S_WALKRW ADLA.;                    /* _777 */
+  format S1_WALKS ADL_1C.;                  /* _778 */
+  format S2_WALKS ADL_2C.;                  /* _779 */
+  format S_WALKS ADLA.;                     /* _780 */
+  format S_WALKSA ADLA.;                    /* _781 */
+  format S_WALKSW ADLA.;                    /* _782 */
+  format S_WANDER PRLOST.;                  /* _783 */
+  format S_WGFHR WGF.;                      /* _785 */
+  format S_WGFWK WGF.;                      /* _786 */
+  format S_WHAPPX R1CESD.;                  /* _789 */
+  format S_WHAPPY YESNO.;                   /* _790 */
+  format S_WORK WORK.;                      /* _792 */
+  format S_WORK2 WORK.;                     /* _793 */
+  format S_WORK62F WORKFLAGS.;              /* _795 */
+  format S_WORK65F WORKFLAGS.;              /* _797 */
+  format S_WORK70AF WORKFLAGS.;             /* _800 */
+  format S_WORK70F WORKFLAGS.;              /* _801 */
+  format S_YR COGCORR.;                     /* _806 */
 %mend format_statements;
 
 
@@ -1513,27 +1514,29 @@
 /* List of variables to be read from input dataset */
   HHID                                      /* 1 */
   PN                                        /* 2 */
-  RAHHIDPN                                  /* 6 */
-  HACOHORT                                  /* 10 */
-  SASSAGEB                                  /* 14 */
-  SASSAGEM                                  /* 15 */
-  SASSRECV                                  /* 16 */
+  HHIDPN                                    /* 3 */
+  RAHHIDPN                                  /* 4 */
+  HACOHORT                                  /* 5 */
+  SASSAGEB                                  /* 15 */
+  SASSAGEM                                  /* 16 */
+  SASSRECV                                  /* 17 */
 %mend readvar1_list;
 
 %macro keep_varlist;
-/* Table SLong: List of 805 variables to keep */
+/* Table SLong: List of 806 variables to keep */
   HHID
   PN
+  HHIDPN
+  RAHHIDPN
+  HACOHORT
   WAVE_NUMBER
+  WAVE_NAME
+  studyyr
+  CYEAR
+  H_HHID
   H_HHIDC
   SUBHH
-  RAHHIDPN
   INW
-  WAVE_NAME
-  CYEAR
-  HACOHORT
-  studyyr
-  H_HHID
   S_HHIDPN
   SASSAGEB
   SASSAGEM
@@ -2364,16 +2367,17 @@ run;
 /*  Initialize output variables, unless they are included in the input dataset */
   /* HHID variable already included  */
   /* PN variable already included  */
+  /* HHIDPN variable already included  */
+  /* RAHHIDPN variable already included  */
+  /* HACOHORT variable already included  */
   WAVE_NUMBER = ._;
+  WAVE_NAME = '*';
+  studyyr = ._;
+  CYEAR = '*';
+  H_HHID = ._;
   H_HHIDC = '*';
   SUBHH = '*';
-  /* RAHHIDPN variable already included  */
   INW = ._;
-  WAVE_NAME = '*';
-  CYEAR = '*';
-  /* HACOHORT variable already included  */
-  studyyr = ._;
-  H_HHID = ._;
   S_HHIDPN = ._;
   /* SASSAGEB variable already included  */
   /* SASSAGEM variable already included  */
@@ -3172,6 +3176,25 @@ run;
 %macro readvar2_list;
 /* List of variables to be read from input dataset */
 /*-- WAVE_NUMBER   --*/
+/*-- WAVE_NAME   --*/
+/*-- studyyr   --*/
+/*-- CYEAR   --*/
+/*-- H_HHID   --*/
+H1HHID
+H2HHID
+H3HHID
+H4HHID
+H5HHID
+H6HHID
+H7HHID
+H8HHID
+H9HHID
+H10HHID
+H11HHID
+H12HHID
+H13HHID
+H14HHID
+H15HHID
 /*-- H_HHIDC   --*/
 H1HHIDC
 H2HHIDC
@@ -3205,25 +3228,6 @@ INW12
 INW13
 INW14
 INW15
-/*-- WAVE_NAME   --*/
-/*-- CYEAR   --*/
-/*-- studyyr   --*/
-/*-- H_HHID   --*/
-H1HHID
-H2HHID
-H3HHID
-H4HHID
-H5HHID
-H6HHID
-H7HHID
-H8HHID
-H9HHID
-H10HHID
-H11HHID
-H12HHID
-H13HHID
-H14HHID
-H15HHID
 /*-- S_HHIDPN   --*/
 S1HHIDPN
 S2HHIDPN
@@ -12160,17 +12164,18 @@ S13YR
 %put ---- Slong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
-WAVE_NUMBER=1 ;
-H_HHIDC=H1HHIDC ;
-SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+/* --- RAND variable:HHIDPN  included */ ;
 /* --- RAND variable:RAHHIDPN  included */ ;
-INW=INW1 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr1992' ;
 /* --- RAND variable:HACOHORT  included */ ;
+WAVE_NUMBER=1 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
 studyyr= hrs_studyyr(wave_number,
 hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr1992' ;
 H_HHID=H1HHID ;
+H_HHIDC=H1HHIDC ;
+SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+INW=INW1 ;
 S_HHIDPN=S1HHIDPN ;
 /* --- RAND variable:SASSAGEB  included */ ;
 /* --- RAND variable:SASSAGEM  included */ ;
@@ -12970,17 +12975,18 @@ if inw=1 then output ;
 %put ---- Slong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
-WAVE_NUMBER=2 ;
-H_HHIDC=H2HHIDC ;
-SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+/* --- RAND variable:HHIDPN  included */ ;
 /* --- RAND variable:RAHHIDPN  included */ ;
-INW=INW2 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr1993_94' ;
 /* --- RAND variable:HACOHORT  included */ ;
+WAVE_NUMBER=2 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
 studyyr= hrs_studyyr(wave_number,
 hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr1993_94' ;
 H_HHID=H2HHID ;
+H_HHIDC=H2HHIDC ;
+SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+INW=INW2 ;
 S_HHIDPN=S2HHIDPN ;
 /* --- RAND variable:SASSAGEB  included */ ;
 /* --- RAND variable:SASSAGEM  included */ ;
@@ -13780,17 +13786,18 @@ if inw=1 then output ;
 %put ---- Slong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
-WAVE_NUMBER=3 ;
-H_HHIDC=H3HHIDC ;
-SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+/* --- RAND variable:HHIDPN  included */ ;
 /* --- RAND variable:RAHHIDPN  included */ ;
-INW=INW3 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr1995_96' ;
 /* --- RAND variable:HACOHORT  included */ ;
+WAVE_NUMBER=3 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
 studyyr= hrs_studyyr(wave_number,
 hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr1995_96' ;
 H_HHID=H3HHID ;
+H_HHIDC=H3HHIDC ;
+SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+INW=INW3 ;
 S_HHIDPN=S3HHIDPN ;
 /* --- RAND variable:SASSAGEB  included */ ;
 /* --- RAND variable:SASSAGEM  included */ ;
@@ -14590,17 +14597,18 @@ if inw=1 then output ;
 %put ---- Slong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
-WAVE_NUMBER=4 ;
-H_HHIDC=H4HHIDC ;
-SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+/* --- RAND variable:HHIDPN  included */ ;
 /* --- RAND variable:RAHHIDPN  included */ ;
-INW=INW4 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr1998' ;
 /* --- RAND variable:HACOHORT  included */ ;
+WAVE_NUMBER=4 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
 studyyr= hrs_studyyr(wave_number,
 hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr1998' ;
 H_HHID=H4HHID ;
+H_HHIDC=H4HHIDC ;
+SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+INW=INW4 ;
 S_HHIDPN=S4HHIDPN ;
 /* --- RAND variable:SASSAGEB  included */ ;
 /* --- RAND variable:SASSAGEM  included */ ;
@@ -15400,17 +15408,18 @@ if inw=1 then output ;
 %put ---- Slong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
-WAVE_NUMBER=5 ;
-H_HHIDC=H5HHIDC ;
-SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+/* --- RAND variable:HHIDPN  included */ ;
 /* --- RAND variable:RAHHIDPN  included */ ;
-INW=INW5 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2000' ;
 /* --- RAND variable:HACOHORT  included */ ;
+WAVE_NUMBER=5 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
 studyyr= hrs_studyyr(wave_number,
 hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2000' ;
 H_HHID=H5HHID ;
+H_HHIDC=H5HHIDC ;
+SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+INW=INW5 ;
 S_HHIDPN=S5HHIDPN ;
 /* --- RAND variable:SASSAGEB  included */ ;
 /* --- RAND variable:SASSAGEM  included */ ;
@@ -16210,17 +16219,18 @@ if inw=1 then output ;
 %put ---- Slong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
-WAVE_NUMBER=6 ;
-H_HHIDC=H6HHIDC ;
-SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+/* --- RAND variable:HHIDPN  included */ ;
 /* --- RAND variable:RAHHIDPN  included */ ;
-INW=INW6 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2002' ;
 /* --- RAND variable:HACOHORT  included */ ;
+WAVE_NUMBER=6 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
 studyyr= hrs_studyyr(wave_number,
 hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2002' ;
 H_HHID=H6HHID ;
+H_HHIDC=H6HHIDC ;
+SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+INW=INW6 ;
 S_HHIDPN=S6HHIDPN ;
 /* --- RAND variable:SASSAGEB  included */ ;
 /* --- RAND variable:SASSAGEM  included */ ;
@@ -17020,17 +17030,18 @@ if inw=1 then output ;
 %put ---- Slong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
-WAVE_NUMBER=7 ;
-H_HHIDC=H7HHIDC ;
-SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+/* --- RAND variable:HHIDPN  included */ ;
 /* --- RAND variable:RAHHIDPN  included */ ;
-INW=INW7 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2004' ;
 /* --- RAND variable:HACOHORT  included */ ;
+WAVE_NUMBER=7 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
 studyyr= hrs_studyyr(wave_number,
 hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2004' ;
 H_HHID=H7HHID ;
+H_HHIDC=H7HHIDC ;
+SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+INW=INW7 ;
 S_HHIDPN=S7HHIDPN ;
 /* --- RAND variable:SASSAGEB  included */ ;
 /* --- RAND variable:SASSAGEM  included */ ;
@@ -17830,17 +17841,18 @@ if inw=1 then output ;
 %put ---- Slong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
-WAVE_NUMBER=8 ;
-H_HHIDC=H8HHIDC ;
-SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+/* --- RAND variable:HHIDPN  included */ ;
 /* --- RAND variable:RAHHIDPN  included */ ;
-INW=INW8 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2006' ;
 /* --- RAND variable:HACOHORT  included */ ;
+WAVE_NUMBER=8 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
 studyyr= hrs_studyyr(wave_number,
 hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2006' ;
 H_HHID=H8HHID ;
+H_HHIDC=H8HHIDC ;
+SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+INW=INW8 ;
 S_HHIDPN=S8HHIDPN ;
 /* --- RAND variable:SASSAGEB  included */ ;
 /* --- RAND variable:SASSAGEM  included */ ;
@@ -18640,17 +18652,18 @@ if inw=1 then output ;
 %put ---- Slong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
-WAVE_NUMBER=9 ;
-H_HHIDC=H9HHIDC ;
-SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+/* --- RAND variable:HHIDPN  included */ ;
 /* --- RAND variable:RAHHIDPN  included */ ;
-INW=INW9 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2008' ;
 /* --- RAND variable:HACOHORT  included */ ;
+WAVE_NUMBER=9 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
 studyyr= hrs_studyyr(wave_number,
 hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2008' ;
 H_HHID=H9HHID ;
+H_HHIDC=H9HHIDC ;
+SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+INW=INW9 ;
 S_HHIDPN=S9HHIDPN ;
 /* --- RAND variable:SASSAGEB  included */ ;
 /* --- RAND variable:SASSAGEM  included */ ;
@@ -19450,17 +19463,18 @@ if inw=1 then output ;
 %put ---- Slong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
-WAVE_NUMBER=10 ;
-H_HHIDC=H10HHIDC ;
-SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+/* --- RAND variable:HHIDPN  included */ ;
 /* --- RAND variable:RAHHIDPN  included */ ;
-INW=INW10 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2010' ;
 /* --- RAND variable:HACOHORT  included */ ;
+WAVE_NUMBER=10 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
 studyyr= hrs_studyyr(wave_number,
 hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2010' ;
 H_HHID=H10HHID ;
+H_HHIDC=H10HHIDC ;
+SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+INW=INW10 ;
 S_HHIDPN=S10HHIDPN ;
 /* --- RAND variable:SASSAGEB  included */ ;
 /* --- RAND variable:SASSAGEM  included */ ;
@@ -20260,17 +20274,18 @@ if inw=1 then output ;
 %put ---- Slong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
-WAVE_NUMBER=11 ;
-H_HHIDC=H11HHIDC ;
-SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+/* --- RAND variable:HHIDPN  included */ ;
 /* --- RAND variable:RAHHIDPN  included */ ;
-INW=INW11 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2012' ;
 /* --- RAND variable:HACOHORT  included */ ;
+WAVE_NUMBER=11 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
 studyyr= hrs_studyyr(wave_number,
 hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2012' ;
 H_HHID=H11HHID ;
+H_HHIDC=H11HHIDC ;
+SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+INW=INW11 ;
 S_HHIDPN=S11HHIDPN ;
 /* --- RAND variable:SASSAGEB  included */ ;
 /* --- RAND variable:SASSAGEM  included */ ;
@@ -21070,17 +21085,18 @@ if inw=1 then output ;
 %put ---- Slong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
-WAVE_NUMBER=12 ;
-H_HHIDC=H12HHIDC ;
-SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+/* --- RAND variable:HHIDPN  included */ ;
 /* --- RAND variable:RAHHIDPN  included */ ;
-INW=INW12 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2014' ;
 /* --- RAND variable:HACOHORT  included */ ;
+WAVE_NUMBER=12 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
 studyyr= hrs_studyyr(wave_number,
 hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2014' ;
 H_HHID=H12HHID ;
+H_HHIDC=H12HHIDC ;
+SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+INW=INW12 ;
 S_HHIDPN=S12HHIDPN ;
 /* --- RAND variable:SASSAGEB  included */ ;
 /* --- RAND variable:SASSAGEM  included */ ;
@@ -21880,17 +21896,18 @@ if inw=1 then output ;
 %put ---- Slong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
-WAVE_NUMBER=13 ;
-H_HHIDC=H13HHIDC ;
-SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+/* --- RAND variable:HHIDPN  included */ ;
 /* --- RAND variable:RAHHIDPN  included */ ;
-INW=INW13 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2016' ;
 /* --- RAND variable:HACOHORT  included */ ;
+WAVE_NUMBER=13 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
 studyyr= hrs_studyyr(wave_number,
 hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2016' ;
 H_HHID=H13HHID ;
+H_HHIDC=H13HHIDC ;
+SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+INW=INW13 ;
 S_HHIDPN=S13HHIDPN ;
 /* --- RAND variable:SASSAGEB  included */ ;
 /* --- RAND variable:SASSAGEM  included */ ;
@@ -22690,17 +22707,18 @@ if inw=1 then output ;
 %put ---- Slong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
-WAVE_NUMBER=14 ;
-H_HHIDC=H14HHIDC ;
-SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+/* --- RAND variable:HHIDPN  included */ ;
 /* --- RAND variable:RAHHIDPN  included */ ;
-INW=INW14 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2018' ;
 /* --- RAND variable:HACOHORT  included */ ;
+WAVE_NUMBER=14 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
 studyyr= hrs_studyyr(wave_number,
 hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2018' ;
 H_HHID=H14HHID ;
+H_HHIDC=H14HHIDC ;
+SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+INW=INW14 ;
 S_HHIDPN=S14HHIDPN ;
 /* --- RAND variable:SASSAGEB  included */ ;
 /* --- RAND variable:SASSAGEM  included */ ;
@@ -23500,17 +23518,18 @@ if inw=1 then output ;
 %put ---- Slong table ;
 /* --- RAND variable:HHID  included */ ;
 /* --- RAND variable:PN  included */ ;
-WAVE_NUMBER=15 ;
-H_HHIDC=H15HHIDC ;
-SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+/* --- RAND variable:HHIDPN  included */ ;
 /* --- RAND variable:RAHHIDPN  included */ ;
-INW=INW15 ;
-WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
-CYEAR='yr2020' ;
 /* --- RAND variable:HACOHORT  included */ ;
+WAVE_NUMBER=15 ;
+WAVE_NAME=  'hrs_wave'||strip(put(wave_number,3.))     /* --- Derived variable  */ ;
 studyyr= hrs_studyyr(wave_number,
 hacohort)     /* --- Derived variable  */ ;
+CYEAR='yr2020' ;
 H_HHID=H15HHID ;
+H_HHIDC=H15HHIDC ;
+SUBHH= substr(H_HHIDC,7)     /* --- Derived variable  */ ;
+INW=INW15 ;
 S_HHIDPN=S15HHIDPN ;
 /* --- RAND variable:SASSAGEB  included */ ;
 /* --- RAND variable:SASSAGEM  included */ ;

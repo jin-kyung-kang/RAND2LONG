@@ -1,7 +1,16 @@
 %put ===> autoexec.sas (PROJECT) STARTS;
 
 %global repo_name repo_path prj_name prj_path;
-%let repo_name = RAND2LONG-ver1;
+%global repo_name repo_path prj_name prj_path;
+
+/* Current working directory in SAS */
+
+data _null_;
+      rc=dlgcdir();
+      put rc=;
+run;
+
+%let repo_name = RAND2LONG;
 %let repo_path = C:\Users\jinha\OneDrive - Michigan Medicine\Desktop\Github\&repo_name;  
 
 
